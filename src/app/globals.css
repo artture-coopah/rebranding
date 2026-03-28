@@ -1,26 +1,132 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Warm neutral scale */
+  --color-sand-50: #FAF9F6;
+  --color-sand-100: #F0EFEB;
+  --color-sand-200: #E3E2DD;
+  --color-sand-300: #D1CFC9;
+  --color-sand-400: #A3A09A;
+  --color-sand-500: #78756F;
+  --color-sand-600: #5C5A55;
+  --color-sand-700: #4A4844;
+  --color-sand-800: #3A3835;
+  --color-sand-900: #1E1D1B;
+  --color-sand-950: #121110;
+
+  /* Accent — vibrant orange (from logo lightning bolt) */
+  --color-bolt: #F27B1C;
+  --color-bolt-light: #F89B4E;
+  --color-bolt-dark: #D46A12;
+
+  /* Fonts */
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-outfit);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base ────────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-sand-50);
+  color: var(--color-sand-900);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* ─── Grain texture overlay ──────────────────────────────── */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ─── Dot grid background ────────────────────────────────── */
+
+.dot-bg {
+  background-image: radial-gradient(circle, var(--color-sand-300) 0.8px, transparent 0.8px);
+  background-size: 28px 28px;
+}
+
+/* ─── Section alternate surface ──────────────────────────── */
+
+.surface-alt {
+  background: var(--color-sand-100);
+}
+
+/* ─── Card ───────────────────────────────────────────────── */
+
+.card {
+  background: var(--color-sand-50);
+  border: 1px solid var(--color-sand-200);
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover {
+  border-color: var(--color-sand-300);
+  box-shadow: 0 8px 32px rgba(30, 29, 27, 0.06), 0 2px 8px rgba(30, 29, 27, 0.04);
+  transform: translateY(-2px);
+}
+
+/* Cards on surface-alt sections have white bg */
+.surface-alt .card {
+  background: white;
+}
+
+/* ─── Section label decoration ───────────────────────────── */
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-bolt);
+}
+
+.section-label::before,
+.section-label::after {
+  content: "";
+  width: 1.5rem;
+  height: 1px;
+  background: var(--color-bolt);
+  opacity: 0.4;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-sand-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sand-300);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sand-400);
+}
+
+/* ─── Selection ──────────────────────────────────────────── */
+
+::selection {
+  background: rgba(242, 123, 28, 0.15);
+  color: var(--color-sand-900);
 }
