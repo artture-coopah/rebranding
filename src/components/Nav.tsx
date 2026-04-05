@@ -8,12 +8,11 @@ import Image from "next/image";
 export function Nav() {
   const [open, setOpen] = useState(false);
   const links = [
-    { label: "Diensten", href: "#diensten" },
+    { label: "Platform", href: "#diensten" },
     { label: "Voorbeelden", href: "#voorbeelden" },
-    { label: "Waarom wij", href: "#waarom" },
+    { label: "Prijzen", href: "#prijzen" },
     { label: "Werkwijze", href: "#werkwijze" },
     { label: "FAQ", href: "#faq" },
-    { label: "Case Studies", href: "/case-studies" },
   ];
 
   return (

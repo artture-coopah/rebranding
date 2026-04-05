@@ -7,23 +7,23 @@ export function Process() {
   const steps = [
     {
       num: "01",
-      title: "Gratis adviesgesprek",
-      desc: "We kijken samen naar je processen en berekenen hoeveel tijd en geld je verliest aan manueel werk. Vrijblijvend.",
+      title: "Probeer het gratis",
+      desc: "Maak een account aan en koppel je inbox. Gmail of Outlook — in een paar klikken verbonden.",
     },
     {
       num: "02",
-      title: "Plan met het hoogste rendement eerst",
-      desc: "Je krijgt een concreet plan. We starten met het proces dat je het snelst geld oplevert of bespaart.",
+      title: "Eerste agent actief in <1 uur",
+      desc: "Je eerste AI-agent classificeert en verwerkt e-mails direct. Snel resultaat, zonder configuratie-marathon.",
     },
     {
       num: "03",
-      title: "Eerste resultaat in 2 weken",
-      desc: "Een werkende automatisering die direct impact heeft. Geen PowerPoints, maar resultaat.",
+      title: "Breid uit met je team",
+      desc: "Voeg teamleden toe en bouw automations op maat van je processen. Van inbox naar actie, voor het hele team.",
     },
     {
       num: "04",
-      title: "Uitrollen & opschalen",
-      desc: "We rollen de oplossing uit, trainen je team, en blijven monitoren. Jullie plukken de vruchten.",
+      title: "Groei op jouw tempo",
+      desc: "Upgrade naar Pro of Enterprise wanneer je klaar bent. Of laat ons een custom automatisering bouwen voor complexe workflows.",
     },
   ];
 
@@ -44,8 +44,8 @@ export function Process() {
             variants={fadeIn}
             className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight"
           >
-            Van gesprek tot{" "}
-            <span className="text-bolt">implementatie in weken</span>
+            Van inbox naar{" "}
+            <span className="text-bolt">actie in minuten</span>
           </motion.h2>
         </motion.div>
 

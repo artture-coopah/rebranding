@@ -1,46 +1,47 @@
 "use client";
 
-import { Workflow, Bot, PlugZap, BarChart3, FileText, Shield, ArrowRight } from "lucide-react";
+import { Mail, Bot, Workflow, Puzzle, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeIn, stagger } from "./animations";
+import { toolLogos } from "./ToolLogos";
 
 export function Services() {
-  const services = [
+  const pillars = [
     {
-      icon: Workflow,
-      title: "Automatische Processen",
-      desc: "Goedkeuringen, herinneringen en terugkerende taken op autopilot. Je team neemt de beslissingen, de rest loopt vanzelf.",
-      tags: ["Goedkeuringen", "Herinneringen", "Minder mailverkeer"],
+      icon: Mail,
+      title: "Gedeelde Inbox",
+      subtitle: "Alle e-mails op één plek",
+      desc: "Eén overzichtelijke inbox voor je hele team. Gmail en Outlook worden automatisch gesynchroniseerd. Elke e-mail wordt geclassificeerd, gerouteerd en toegewezen — zonder manueel werk.",
+      features: [
+        "Gmail & Outlook synchronisatie",
+        "Automatische classificatie & routing",
+        "Team-toewijzing per e-mail",
+        "Volledige e-mailgeschiedenis per klant",
+      ],
     },
     {
       icon: Bot,
-      title: "Slimme AI-Medewerkers",
-      desc: "Een AI die documenten leest, data verzamelt en mails voorbereidt. Jouw mensen houden de controle en doen de eindcheck.",
-      tags: ["Tijdsbesparing", "Foutloze data", "Minder overtypen"],
+      title: "AI-Agents",
+      subtitle: "Slim verwerken, niet alleen sorteren",
+      desc: "AI-agents die je e-mails niet alleen lezen, maar ook begrijpen en verwerken. Van automatische triage en data-extractie tot slimme antwoorden — jouw team controleert, de AI doet het voorwerk.",
+      features: [
+        "Automatische triage & prioritering",
+        "Data-extractie uit e-mails en bijlagen",
+        "AI-gegenereerde antwoorden",
+        "Classificatie per type, urgentie en klant",
+      ],
     },
     {
-      icon: PlugZap,
-      title: "Gekoppelde Systemen",
-      desc: "Boekhouding, CRM en e-mail die naadloos samenwerken. Geen dubbele invoer meer, en altijd up-to-date cijfers.",
-      tags: ["Geen dataverlies", "Slimme koppelingen", "Eén bron van waarheid"],
-    },
-    {
-      icon: BarChart3,
-      title: "Heldere Dashboards",
-      desc: "Zie in \u00e9\u00e9n oogopslag waar je omzet vandaan komt en waar je marge lekt. Real-time, niet na 3 weken in Excel.",
-      tags: ["Live cijfers", "Betere beslissingen", "Visueel helder"],
-    },
-    {
-      icon: FileText,
-      title: "Document Automatisering",
-      desc: "Offertes, facturen en follow-ups rollen kant-en-klaar uit het systeem. Sneller documenten maken = sneller betaald worden.",
-      tags: ["Sjablonen in huisstijl", "Foutloze opmaak", "Automatisch verzenden"],
-    },
-    {
-      icon: Shield,
-      title: "Begeleiding van A tot Z",
-      desc: "Wij lichten je processen door, bouwen de oplossing en trainen je team. En als het draait, blijven we het 24/7 in de gaten houden.",
-      tags: ["Persoonlijke support", "Training op maat", "Garantie"],
+      icon: Workflow,
+      title: "Automation Builder",
+      subtitle: "Bouw je eigen workflows",
+      desc: "Een visuele drag-and-drop builder waarmee je complete workflows opstelt. Van e-mail ontvangen tot actie uitvoeren — zonder code, volledig op maat van jouw processen.",
+      features: [
+        "Visuele drag-and-drop editor",
+        "Triggers op e-mail, tijd of conditie",
+        "Koppelingen met Odoo, Teamleader, Billit en meer",
+        "Goedkeuringsflows en escalaties",
+      ],
     },
   ];
 
@@ -55,21 +56,20 @@ export function Services() {
           className="text-center mb-16"
         >
           <motion.div variants={fadeIn} className="flex justify-center mb-4">
-            <span className="section-label">Onze diensten</span>
+            <span className="section-label">Het platform</span>
           </motion.div>
           <motion.h2
             variants={fadeIn}
             className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight"
           >
-            Waar wint jouw team{" "}
-            <span className="text-bolt">tijd mee?</span>
+            Drie pijlers, één{" "}
+            <span className="text-bolt">platform</span>
           </motion.h2>
           <motion.p
             variants={fadeIn}
             className="mt-4 text-sand-500 max-w-2xl mx-auto text-lg"
           >
-            AI neemt het saaie werk over. Jouw mensen doen waar ze goed in
-            zijn: verkopen, klanten helpen, en je bedrijf laten groeien.
+            Aifficient Mail combineert een gedeelde inbox, AI-agents en een automation builder tot één platform dat je e-mails omzet in actie.
           </motion.p>
         </motion.div>
 
@@ -78,48 +78,78 @@ export function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid lg:grid-cols-3 gap-6"
         >
-          {services.map((s) => (
+          {pillars.map((p) => (
             <motion.div
-              key={s.title}
+              key={p.title}
               variants={fadeIn}
-              className="group card p-8"
+              className="group card p-8 flex flex-col"
             >
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-bolt/8 transition-colors group-hover:bg-bolt/15">
-                <s.icon size={24} className="text-bolt" />
+                <p.icon size={24} className="text-bolt" />
               </div>
-              <h3 className="font-display text-lg font-semibold mb-2 text-sand-900">
-                {s.title}
+              <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-bolt">
+                {p.subtitle}
+              </div>
+              <h3 className="font-display text-xl font-semibold mb-3 text-sand-900">
+                {p.title}
               </h3>
-              <p className="text-sand-500 leading-relaxed mb-5">{s.desc}</p>
-              <div className="flex flex-wrap gap-2">
-                {s.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-sand-100 px-3 py-1 text-xs text-sand-500 border border-sand-200"
-                  >
-                    {tag}
-                  </span>
+              <p className="text-sand-500 leading-relaxed mb-6">{p.desc}</p>
+              <ul className="mt-auto flex flex-col gap-2.5">
+                {p.features.map((f) => (
+                  <li key={f} className="flex items-start gap-2 text-sm text-sand-600">
+                    <svg className="w-4 h-4 text-bolt shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"/>
+                    </svg>
+                    {f}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* CTA Diensten */}
+        {/* Browser extension callout */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-12 card p-8 flex flex-col sm:flex-row items-center gap-6"
+        >
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-bolt/8 shrink-0">
+            <Puzzle size={28} className="text-bolt" />
+          </div>
+          <div className="flex-1 text-center sm:text-left">
+            <h3 className="font-display text-lg font-semibold text-sand-900 mb-1">
+              Browser Extension voor Gmail & Outlook
+            </h3>
+            <p className="text-sand-500">
+              Werk rechtstreeks vanuit je inbox. De Aifficient sidebar toont AI-classificatie, suggesties en snelle acties — zonder van tab te wisselen.
+            </p>
+          </div>
+          <div className="flex items-center gap-3 shrink-0">
+            {["Outlook", "Teams"].map((tool) => {
+              const Logo = toolLogos[tool];
+              return Logo ? <Logo key={tool} className="w-6 h-6 opacity-60" /> : null;
+            })}
+          </div>
+        </motion.div>
+
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 flex justify-center"
+          className="mt-12 flex justify-center"
         >
           <a
-            href="#contact"
+            href="#prijzen"
             className="group flex items-center gap-2 rounded-full border-2 border-bolt text-bolt bg-white px-8 py-3 text-sm font-semibold hover:bg-bolt hover:text-white transition-all shadow-sm"
           >
-            Ontdek of we dit voor jou kunnen bouwen
+            Bekijk prijzen en start vandaag
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </a>
         </motion.div>

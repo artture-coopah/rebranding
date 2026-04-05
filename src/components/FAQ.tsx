@@ -15,7 +15,7 @@ export function FAQ() {
     },
     {
       q: "Werken jullie met onze bestaande tools?",
-      a: "Ja. We integreren met Slack, Google Workspace, Microsoft Teams, Odoo, en elk systeem met een API. Geen migraties, geen gedoe. We bouwen bovenop wat je al hebt.",
+      a: "Ja. We integreren met Outlook, Microsoft Teams, Odoo, Teamleader, Billit, en elk systeem met een API. Geen migraties, geen gedoe. We bouwen bovenop wat je al hebt.",
     },
     {
       q: "Ik heb geen technische kennis. Is dat een probleem?",
@@ -26,12 +26,16 @@ export function FAQ() {
       a: "Absoluut niet, en dat is ook niet ons doel. Wij versterken je team. AI neemt de taken over die niemand graag doet: kopieerwerk, opvolging, rapportage. Je mensen krijgen hun tijd terug voor het werk waar ze goed in zijn en energie van krijgen. Het resultaat: een gemotiveerder team dat meer bereikt.",
     },
     {
-      q: "Hoeveel kost automatisering vergeleken met iemand aannemen?",
-      a: "Reken zelf: loon, sociale lasten, vakantiegeld, laptop, onboarding. Dat loopt snel op. Automatisering lost hetzelfde op voor een fractie, zonder ziektedagen, zonder opzegtermijn, en het schaalt mee naarmate je groeit.",
+      q: "Hoeveel kost Aifficient Mail?",
+      a: "Aifficient Mail start vanaf \u20ac19 per seat per maand (Starter). Het Professional-plan kost \u20ac49/seat/maand en bevat onbeperkt mailboxen, AI-agents en geavanceerde automations. Enterprise is \u20ac89/seat/maand met custom integraties en dedicated support. Je kan starten met een gratis proefperiode.",
     },
     {
       q: "Is dit ook relevant voor een klein bedrijf?",
-      a: "Juist voor kleinere bedrijven. Met minder mensen telt elke verloren uur dubbel. E\u00e9n automatisering kan het verschil maken tussen breakeven en winstgevend draaien.",
+      a: "Juist voor kleinere bedrijven. Met minder mensen telt elke verloren uur dubbel. E\u00e9n automatisering kan het verschil maken tussen breakeven en winstgevend draaien. Ons Starter-plan is specifiek ontworpen voor zelfstandigen en kleine teams.",
+    },
+    {
+      q: "Kan ik VLAIO-subsidie gebruiken voor Aifficient?",
+      a: "Ja. Vlaamse KMO\u2019s kunnen via de VLAIO kmo-portefeuille tot 45% subsidie krijgen op digitaliseringsprojecten. Aifficient komt hiervoor in aanmerking. Bij ons Enterprise-plan begeleiden we je bij de aanvraag.",
     },
     {
       q: "Hoe zit het met gegevensbescherming en GDPR?",
@@ -39,7 +43,7 @@ export function FAQ() {
     },
     {
       q: "Wat is het verschil met ChatGPT of andere AI-tools?",
-      a: "ChatGPT is een generieke tool die je bedrijf, je processen en je data niet kent. Wij bouwen oplossingen die specifiek zijn afgestemd op jouw workflows en systemen. Het verschil: ChatGPT beantwoordt losse vragen, onze automatiseringen nemen volledige processen over zonder tussenkomst.",
+      a: "ChatGPT is een generieke chatbot. Aifficient Mail is een compleet platform: gedeelde inbox, AI-agents en een automation builder die specifiek zijn afgestemd op jouw e-mailworkflows. Het verschil: ChatGPT beantwoordt losse vragen, Aifficient verwerkt je e-mails automatisch van ontvangst tot actie.",
     },
   ];
 

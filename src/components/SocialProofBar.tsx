@@ -18,7 +18,7 @@ export function SocialProofBar() {
             Werkt met je bestaande tools
           </span>
           <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
-            {["Slack", "Google", "Teams", "Odoo", "Excel", "Zapier"].map((tool) => {
+            {["Outlook", "Teams", "Odoo", "Teamleader", "Billit", "Excel"].map((tool) => {
               const Logo = toolLogos[tool];
               return (
                 <div key={tool} className="flex items-center gap-2" title={tool}>

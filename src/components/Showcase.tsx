@@ -942,7 +942,7 @@ const flows: Flow[] = [
           <IntegrationView
             title="Lead gesynchroniseerd"
             subtitle="LEAD-2026-0412 in je CRM"
-            integrations={["hubspot", "salesforce", "teamleader", "slack", "gmail"]}
+            integrations={["hubspot", "salesforce", "teamleader", "outlook", "teams"]}
           />
         ),
       },

@@ -1,7 +1,7 @@
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
-import { WhyUs } from "@/components/WhyUs";
+import { Pricing } from "@/components/Pricing";
 import { Process } from "@/components/Process";
 import { Sectoren } from "@/components/Sectoren";
 import { Testimonials } from "@/components/Testimonials";
@@ -23,8 +23,7 @@ export default function Home() {
         <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
         <Services />
         <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-50)" />
-        <WhyUs />
-        <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
+        <Pricing />
         <Process />
         <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-50)" />
         <Sectoren />

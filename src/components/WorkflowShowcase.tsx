@@ -272,7 +272,7 @@ export function WorkflowShowcase() {
             className="font-display font-semibold tracking-tight text-sand-900 mb-4"
             style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)" }}
           >
-            See it in <span className="text-bolt italic">action</span>
+            Zie het in <span className="text-bolt italic">actie</span>
           </h2>
           <p className="text-lg text-sand-500 max-w-[580px] mx-auto">
             Kies jouw sector en ontdek hoe aifficient e-mails omzet in actie — volledig automatisch.

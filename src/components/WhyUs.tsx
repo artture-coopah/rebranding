@@ -15,7 +15,7 @@ export function WhyUs() {
     {
       icon: PlugZap,
       title: "Bovenop je bestaande tools",
-      desc: "Geen migraties, geen nieuw systeem leren. Wij bouwen op wat je al gebruikt: Slack, Google, Teams, Odoo, of je eigen software.",
+      desc: "Geen migraties, geen nieuw systeem leren. Wij bouwen op wat je al gebruikt: Outlook, Teams, Odoo, Teamleader, Billit, of je eigen software.",
       highlight: "Geen verstoring",
     },
     {

@@ -51,7 +51,7 @@ export function Hero() {
               className="mb-8 inline-flex items-center gap-2 rounded-full border border-bolt/20 bg-bolt/5 px-4 py-1.5 text-sm text-bolt font-medium"
             >
               <Zap size={14} />
-              AI-powered email automation
+              Aifficient Mail — van inbox naar actie
             </motion.div>
 
             {/* Heading */}
@@ -62,8 +62,8 @@ export function Hero() {
               className="font-display font-semibold leading-[0.95] tracking-tight"
               style={{ fontSize: "clamp(2.25rem, 4vw, 3.25rem)" }}
             >
-              Stop Managing Emails.{" "}
-              <span className="text-bolt italic">Start Running Your Business.</span>
+              Elke e-mail wordt{" "}
+              <span className="text-bolt italic">automatisch actie.</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -73,8 +73,8 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.25 }}
               className="mt-8 max-w-xl text-lg text-sand-500 leading-relaxed"
             >
-              Every email should trigger action — automatically. From inbox chaos to total productivity —{" "}
-              <strong className="text-sand-900 font-medium">powered by AI</strong>.
+              Aifficient Mail leest, sorteert en verwerkt je e-mails automatisch. Jouw team focust op klanten —{" "}
+              <strong className="text-sand-900 font-medium">de AI doet de rest</strong>.
             </motion.p>
 
             {/* CTAs */}
@@ -85,10 +85,10 @@ export function Hero() {
               className="mt-10 flex flex-col sm:flex-row items-start gap-4"
             >
               <a
-                href="#contact"
+                href="#prijzen"
                 className="group flex items-center gap-2 rounded-full bg-bolt px-8 py-4 text-base font-medium text-white transition-all hover:bg-bolt-dark hover:shadow-xl hover:shadow-bolt/15 hover:scale-[1.02]"
               >
-                Get Started
+                Bekijk prijzen
                 <ArrowRight
                   size={18}
                   className="transition-transform group-hover:translate-x-1"
@@ -98,7 +98,7 @@ export function Hero() {
                 href="#showcase"
                 className="flex items-center gap-2 rounded-full border border-sand-300 px-8 py-4 text-base font-medium text-sand-500 transition-all hover:border-bolt/30 hover:text-sand-900"
               >
-                Watch Demo
+                Bekijk demo
                 <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"/></svg>
               </a>
             </motion.div>
@@ -110,7 +110,7 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.55 }}
               className="mt-8 flex flex-col gap-2"
             >
-              {["Save 10+ hours per employee/month", "Fast & easy setup", "No credit card required"].map((t) => (
+              {["Bespaar 10+ uur per medewerker/maand", "Snel en eenvoudig opgezet", "Vanaf €19/seat/maand"].map((t) => (
                 <span key={t} className="flex items-center gap-2 text-sm text-sand-500">
                   <Check />
                   {t}
@@ -129,7 +129,7 @@ export function Hero() {
                 Werkt met je tools
               </span>
               <div className="flex items-center gap-4">
-                {["Slack", "Google", "Teams", "Odoo", "Excel", "Zapier"].map((tool) => {
+                {["Outlook", "Teams", "Odoo", "Teamleader", "Billit", "Excel"].map((tool) => {
                   const Logo = toolLogos[tool];
                   return Logo ? <Logo key={tool} className="w-5 h-5 opacity-50 hover:opacity-100 transition-opacity" /> : null;
                 })}

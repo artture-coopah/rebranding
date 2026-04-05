@@ -9,26 +9,26 @@ export function Testimonials() {
   const results = [
     {
       metric: "2 dagen \u2192 2 uur",
-      context: "Het admin-team verloor 2 dagen per maand aan facturen opmaken. Nu focussen ze op klantenrelaties en proactieve opvolging.",
-      category: "Logistiek",
+      context: "Een admin-team dat 2 dagen per maand verliest aan facturen opmaken, kan die tijd terugwinnen voor klantenrelaties en proactieve opvolging.",
+      category: "Voorbeeld \u2014 Logistiek",
       accent: "border-l-bolt",
     },
     {
       metric: "\u20AC50K/jaar bespaard",
-      context: "In plaats van iemand aan te nemen voor admin, investeert dit bedrijf nu in opleiding en groei van het bestaande team.",
-      category: "Dienstverlening",
+      context: "In plaats van iemand aan te nemen voor admin, kan een KMO investeren in opleiding en groei van het bestaande team.",
+      category: "Voorbeeld \u2014 Dienstverlening",
       accent: "border-l-bolt-light",
     },
     {
       metric: "3x snellere respons",
       context: "AI categoriseert en stelt antwoorden voor, het team controleert en verstuurt. Sneller reageren met een persoonlijke toets.",
-      category: "Klantenservice",
+      category: "Voorbeeld \u2014 Klantenservice",
       accent: "border-l-amber-400",
     },
     {
       metric: "80% minder offertetijd",
       context: "De calculator doet het voorwerk, de projectleider focust op het klantgesprek. Betere offertes, sneller verstuurd.",
-      category: "Bouw",
+      category: "Voorbeeld \u2014 Bouw",
       accent: "border-l-green-500",
     },
   ];
@@ -44,15 +44,21 @@ export function Testimonials() {
           className="text-center mb-16"
         >
           <motion.div variants={fadeIn} className="flex justify-center mb-4">
-            <span className="section-label">Resultaten</span>
+            <span className="section-label">Verwachte resultaten</span>
           </motion.div>
           <motion.h2
             variants={fadeIn}
             className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight"
           >
             Wat automatisering{" "}
-            <span className="text-bolt">concreet oplevert</span>
+            <span className="text-bolt">concreet kan opleveren</span>
           </motion.h2>
+          <motion.p
+            variants={fadeIn}
+            className="mt-4 text-sand-500 max-w-2xl mx-auto"
+          >
+            Berekende ROI op basis van typische KMO-processen. Jouw resultaat hangt af van je huidige werkwijze.
+          </motion.p>
         </motion.div>
 
         <motion.div

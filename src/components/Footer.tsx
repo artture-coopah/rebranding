@@ -22,13 +22,13 @@ export function Footer() {
             href="#diensten"
             className="hover:text-white transition-colors"
           >
-            Diensten
+            Platform
           </a>
           <a
-            href="#waarom"
+            href="#prijzen"
             className="hover:text-white transition-colors"
           >
-            Waarom wij
+            Prijzen
           </a>
           <a
             href="#werkwijze"
@@ -38,9 +38,6 @@ export function Footer() {
           </a>
           <a href="#faq" className="hover:text-white transition-colors">
             FAQ
-          </a>
-          <a href="/case-studies" className="hover:text-white transition-colors">
-            Case Studies
           </a>
           <a
             href="mailto:hello@aifficient.be"

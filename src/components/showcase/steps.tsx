@@ -299,16 +299,17 @@ export function CompleteView({ title, subtitle, stats }: { title: string; subtit
 
 /* ── INTEGRATION ── */
 const allIntegrations: Record<string, { name: string; color: string; icon: string }> = {
-  excel: { name: "Microsoft Excel", color: "#217346", icon: "microsoftexcel" },
+  excel: { name: "Microsoft Excel", color: "#217346", icon: "excel" },
   odoo: { name: "Odoo", color: "#714B67", icon: "odoo" },
-  teamleader: { name: "Teamleader", color: "#00B2B2", icon: "teamviewer" },
+  teamleader: { name: "Teamleader", color: "#00B2B2", icon: "teamleader" },
   salesforce: { name: "Salesforce", color: "#00A1E0", icon: "salesforce" },
   hubspot: { name: "HubSpot", color: "#FF7A59", icon: "hubspot" },
-  outlook: { name: "Outlook", color: "#0078D4", icon: "microsoftoutlook" },
-  gmail: { name: "Gmail", color: "#EA4335", icon: "gmail" },
+  outlook: { name: "Outlook", color: "#0078D4", icon: "outlook" },
+  billit: { name: "Billit", color: "#1B1464", icon: "billit" },
+  teams: { name: "Teams", color: "#6264A7", icon: "teams" },
   slack: { name: "Slack", color: "#4A154B", icon: "slack" },
   exact: { name: "Exact Online", color: "#F04060", icon: "exact" },
-  sheets: { name: "Google Sheets", color: "#0F9D58", icon: "googlesheets" },
+  sheets: { name: "Google Sheets", color: "#0F9D58", icon: "sheets" },
 };
 
 export function IntegrationView({ title, subtitle, integrations }: { title: string; subtitle: string; integrations: string[] }) {
@@ -337,7 +338,7 @@ export function IntegrationView({ title, subtitle, integrations }: { title: stri
           {items.map((intg, i) => (
             <motion.div key={intg.name} initial={{ opacity: 0, y: 12, scale: 0.8 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ delay: 0.4 + i * 0.1, type: "spring", stiffness: 300, damping: 20 }} className="flex flex-col items-center gap-1.5 group">
               <div className="relative w-12 h-12 rounded-xl bg-white border border-sand-200 shadow-sm grid place-items-center hover:shadow-md hover:border-sand-300 transition-all cursor-pointer">
-                <img src={`https://cdn.simpleicons.org/${intg.icon}/${intg.color.replace("#", "")}`} alt={intg.name} className="w-6 h-6" loading="lazy" />
+                <img src={`/integrations/${intg.icon}.svg`} alt={intg.name} className="w-6 h-6" loading="lazy" />
               </div>
               <span className="text-[8px] font-semibold text-sand-400 text-center leading-tight">{intg.name}</span>
             </motion.div>

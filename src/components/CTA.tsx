@@ -87,7 +87,7 @@ export function CTA() {
               href="mailto:hello@aifficient.be"
               className="mt-8 inline-flex items-center gap-2 text-sm text-white/50 hover:text-white/80 transition-colors"
             >
-              Of mail ons direct: hello@aifficient.be
+              Of mail ons rechtstreeks: hello@aifficient.be
             </motion.a>
           </motion.div>
 

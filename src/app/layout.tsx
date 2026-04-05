@@ -18,24 +18,26 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL("https://aifficient.be"),
   title: {
-    default: "Aifficient | Jouw team kan het dubbele aan. Zonder aan te werven.",
+    default: "Aifficient Mail | Van inbox naar actie — AI email platform voor KMO's",
     template: "%s | Aifficient",
   },
   description:
-    "Versterk je team door repetitief werk te automatiseren met AI. Geen vervanging, wel meer focus op wat ertoe doet. Resultaat in 2-6 weken. Gratis adviesgesprek voor Belgische KMO's.",
+    "Aifficient Mail leest, sorteert en verwerkt je e-mails automatisch. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's. Vanaf €19/seat/maand.",
   keywords: [
-    "workflow automatisering",
+    "email automatisering KMO",
+    "AI email platform",
+    "shared inbox KMO",
+    "gedeelde inbox bedrijf",
+    "email AI agent",
+    "automation builder email",
+    "browser extension email",
     "AI automatisering België",
     "procesautomatisering KMO",
-    "tijdsbesparing automatisering",
-    "custom software België",
-    "AI implementatie bedrijf",
-    "werkprocessen automatiseren",
+    "tijdsbesparing email",
+    "inbox automatisering",
+    "email workflow automatisering",
     "digitale transformatie KMO",
     "automatisering Vlaanderen",
-    "AI consultancy België",
-    "RPA België",
-    "bedrijfsprocessen optimaliseren",
   ],
   authors: [{ name: "Aifficient" }],
   creator: "Aifficient",
@@ -44,23 +46,23 @@ export const metadata: Metadata = {
     locale: "nl_BE",
     url: "https://aifficient.be",
     siteName: "Aifficient",
-    title: "Aifficient | Jouw team kan het dubbele aan. Zonder aan te werven.",
+    title: "Aifficient Mail | Van inbox naar actie — AI email platform voor KMO's",
     description:
-      "Meer winst uit je huidige team. Automatiseer repetitief werk met AI-systemen op maat van jouw KMO. Vraag je gratis adviesgesprek aan.",
+      "Elke e-mail wordt automatisch actie. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's. Vanaf €19/seat/maand.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Aifficient - AI Automatisering voor KMO's in België",
+        alt: "Aifficient Mail - AI email platform voor KMO's in België",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aifficient | Jouw team kan het dubbele aan. Zonder aan te werven.",
+    title: "Aifficient Mail | Van inbox naar actie — AI email platform voor KMO's",
     description:
-      "Meer winst uit je huidige team. Automatiseer repetitief werk met AI-systemen op maat van jouw KMO.",
+      "Elke e-mail wordt automatisch actie. Gedeelde inbox, AI-agents en automation builder. Vanaf €19/seat/maand.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -100,16 +102,17 @@ export default function RootLayout({
               name: "Aifficient",
               url: "https://aifficient.be",
               description:
-                "Versterk je team, automatiseer het saaie werk. AI-automatisering voor KMO's in België.",
+                "Aifficient Mail — AI email platform dat e-mails automatisch leest, sorteert en verwerkt. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's.",
               areaServed: {
                 "@type": "Country",
                 name: "Belgium",
               },
               serviceType: [
-                "Workflow Automatisering",
-                "AI Implementatie",
-                "Custom Software Development",
-                "Procesoptimalisatie",
+                "AI Email Platform",
+                "Gedeelde Inbox",
+                "Email Automatisering",
+                "AI Agents",
+                "Automation Builder",
               ],
             }),
           }}
