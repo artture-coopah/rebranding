@@ -45,6 +45,10 @@ export function FAQ() {
       q: "Wat is het verschil met ChatGPT of andere AI-tools?",
       a: "ChatGPT is een generieke chatbot. Aifficient Mail is een compleet platform: gedeelde inbox, AI-agents en een automation builder die specifiek zijn afgestemd op jouw e-mailworkflows. Het verschil: ChatGPT beantwoordt losse vragen, Aifficient verwerkt je e-mails automatisch van ontvangst tot actie.",
     },
+    {
+      q: "Ik heb een specifieke oplossing nodig — kan dat?",
+      a: "Zeker. Naast Aifficient Mail bouwen we ook custom automations en maatwerksoftware. Van complexe integraties tot volledige applicaties — we bekijken samen wat je nodig hebt en bouwen het op maat. Neem contact op voor een vrijblijvend gesprek.",
+    },
   ];
 
   return (
