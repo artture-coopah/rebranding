@@ -20,16 +20,16 @@ export default function Home() {
       <main>
         <Hero />
         <Showcase />
-        <CustomFlow />
         <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
         <Services />
         <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-50)" />
-        <Pricing />
-        <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
+        <CustomFlow />
         <Process />
-        <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-50)" />
+        <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
         <Sectoren />
         <Testimonials />
+        <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-50)" />
+        <Pricing />
         <Team />
         <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
         <FAQ />
