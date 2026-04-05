@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme inline {
+@theme {
   /* Warm neutral scale */
   --color-sand-50: #FAF9F6;
   --color-sand-100: #F0EFEB;
@@ -67,7 +67,7 @@ body {
 .card {
   background: var(--color-sand-50);
   border: 1px solid var(--color-sand-200);
-  border-radius: 1rem;
+  border-radius: var(--card-radius, 1rem);
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 

@@ -32,7 +32,7 @@ interface BlobProps {
   speed?: number;
 }
 
-export function Blob({ className = '', variant = 1, fill = '#F27B1C', animate: shouldAnimate = false, speed = 8 }: BlobProps) {
+export function Blob({ className = '', variant = 1, fill = 'var(--color-bolt)', animate: shouldAnimate = false, speed = 8 }: BlobProps) {
   const vb = variant === 1 ? "0 0 600 750" : "0 0 510 600";
   const frames = variant === 1 ? v1 : v2;
   const n = frames.length - 1;
@@ -42,7 +42,7 @@ export function Blob({ className = '', variant = 1, fill = '#F27B1C', animate: s
   return (
     <div className={className}>
       <svg viewBox={vb} fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fillRule="evenodd" clipRule="evenodd" d={frames[0]} fill={fill}>
+        <path fillRule="evenodd" clipRule="evenodd" d={frames[0]} style={{ fill }}>
           {shouldAnimate && (
             <animate
               attributeName="d"

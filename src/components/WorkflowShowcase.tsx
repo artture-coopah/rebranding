@@ -32,7 +32,7 @@ interface Workflow {
 
 /* ── Colors per node type ── */
 const colors: Record<string, { bg: string; border: string; iconBg: string; dot: string }> = {
-  trigger:     { bg: "bg-bolt/8",          border: "border-bolt/25",         iconBg: "bg-bolt/15 text-bolt",           dot: "#F27B1C" },
+  trigger:     { bg: "bg-bolt/8",          border: "border-bolt/25",         iconBg: "bg-bolt/15 text-bolt",           dot: "var(--color-bolt)" },
   ai:          { bg: "bg-emerald-500/8",   border: "border-emerald-500/25",  iconBg: "bg-emerald-500/15 text-emerald-600", dot: "#22c55e" },
   action:      { bg: "bg-blue-500/8",      border: "border-blue-500/25",     iconBg: "bg-blue-500/15 text-blue-600",  dot: "#3b82f6" },
   condition:   { bg: "bg-amber-500/8",     border: "border-amber-500/25",    iconBg: "bg-amber-500/15 text-amber-600", dot: "#f59e0b" },
@@ -193,7 +193,7 @@ function EdgeLine({ d, accent, delay, label }: { d: string; accent?: boolean; de
         ref={ref}
         d={d}
         fill="none"
-        stroke={accent ? "#F27B1C" : "#D1CFC9"}
+        stroke={accent ? "var(--color-bolt)" : "#D1CFC9"}
         strokeWidth={accent ? 2.5 : 2}
         strokeLinecap="round"
       />

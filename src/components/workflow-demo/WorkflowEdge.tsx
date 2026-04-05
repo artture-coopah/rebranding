@@ -76,7 +76,7 @@ export function EdgeLine({ d, accent, delay, label, isConnectedToSelected, showP
     return () => clearTimeout(timeout);
   }, [delay, d]);
 
-  const strokeColor = accent ? "#F27B1C" : isConnectedToSelected ? "#A3A09A" : "#D1CFC9";
+  const strokeColor = accent ? "var(--color-bolt)" : isConnectedToSelected ? "#A3A09A" : "#D1CFC9";
   const strokeW = accent ? 2.5 : 2;
 
   return (
@@ -91,7 +91,7 @@ export function EdgeLine({ d, accent, delay, label, isConnectedToSelected, showP
       />
       {label && <LabelOnPath d={d} label={label} delay={delay} />}
       {showParticle && accent && (
-        <circle r="3.5" fill="#F27B1C" opacity="0.7">
+        <circle r="3.5" fill="var(--color-bolt)" opacity="0.7">
           <animateMotion
             dur={`${PARTICLE_DURATION}s`}
             repeatCount="indefinite"

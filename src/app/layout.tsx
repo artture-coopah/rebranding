@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Outfit } from "next/font/google";
 import "./globals.css";
+import { StyleDebugBar } from "@/components/StyleDebugBar";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -118,7 +119,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        {process.env.NODE_ENV === "development" && <StyleDebugBar />}
+      </body>
     </html>
   );
 }

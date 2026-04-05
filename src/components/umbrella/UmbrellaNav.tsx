@@ -3,8 +3,8 @@
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 export function UmbrellaNav() {
   const [open, setOpen] = useState(false);

@@ -10,11 +10,11 @@ export function MailIllustration({ className }: { className?: string }) {
       <path d="M10 26l22 14 22-14" stroke="#F87171" strokeWidth="1.5" strokeLinecap="round"/>
       {/* Lightning bolt */}
       <g transform="translate(52, 8)">
-        <path d="M12 2L5 14h5l-2 10 9-14h-5l4-8z" fill="#F27B1C" stroke="#D46A12" strokeWidth="1" strokeLinejoin="round"/>
+        <path d="M12 2L5 14h5l-2 10 9-14h-5l4-8z" fill="var(--color-bolt)" stroke="var(--color-bolt-dark)" strokeWidth="1" strokeLinejoin="round"/>
       </g>
       {/* Sparkles */}
-      <circle cx="62" cy="8" r="1.5" fill="#F27B1C" opacity=".6"/>
-      <circle cx="72" cy="18" r="1" fill="#F27B1C" opacity=".4"/>
+      <circle cx="62" cy="8" r="1.5" fill="var(--color-bolt)" opacity=".6"/>
+      <circle cx="72" cy="18" r="1" fill="var(--color-bolt)" opacity=".4"/>
       {/* Checkmark result */}
       <circle cx="68" cy="56" r="10" fill="#D1FAE5" stroke="#6EE7B7" strokeWidth="1.5"/>
       <path d="M63 56l3 3 6-6" stroke="#059669" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -35,8 +35,8 @@ export function InvoiceIllustration({ className }: { className?: string }) {
       <circle cx="34" cy="44" r="5" fill="#FEE2E2"/>
       <text x="34" y="47.5" textAnchor="middle" fill="#F87171" fontSize="8" fontWeight="bold" fontFamily="system-ui">&euro;</text>
       {/* Arrow */}
-      <path d="M54 32l8 0" stroke="#F27B1C" strokeWidth="2" strokeLinecap="round"/>
-      <path d="M60 28l4 4-4 4" stroke="#F27B1C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M54 32l8 0" stroke="var(--color-bolt)" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M60 28l4 4-4 4" stroke="var(--color-bolt)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       {/* Result document with check */}
       <rect x="66" y="18" width="10" height="28" rx="2" fill="#D1FAE5" stroke="#6EE7B7" strokeWidth="1"/>
       <circle cx="71" cy="58" r="10" fill="#D1FAE5" stroke="#6EE7B7" strokeWidth="1.5"/>
@@ -54,15 +54,15 @@ export function FollowUpIllustration({ className }: { className?: string }) {
         <path d="M28 8L22 22l-8-6" stroke="#F87171" strokeWidth="1.5" strokeLinejoin="round"/>
       </g>
       {/* Trail dots */}
-      <circle cx="40" cy="28" r="2" fill="#F27B1C" opacity=".3"/>
-      <circle cx="48" cy="24" r="2.5" fill="#F27B1C" opacity=".5"/>
-      <circle cx="56" cy="20" r="3" fill="#F27B1C" opacity=".7"/>
+      <circle cx="40" cy="28" r="2" fill="var(--color-bolt)" opacity=".3"/>
+      <circle cx="48" cy="24" r="2.5" fill="var(--color-bolt)" opacity=".5"/>
+      <circle cx="56" cy="20" r="3" fill="var(--color-bolt)" opacity=".7"/>
       {/* Circular arrow (auto-follow-up) */}
       <g transform="translate(50, 36)">
         <path d="M14 8a10 10 0 1 0-4 8" stroke="#059669" strokeWidth="2" strokeLinecap="round" fill="none"/>
         <path d="M10 20l2-4-4-1" stroke="#059669" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         {/* Bolt inside */}
-        <path d="M11 5L8 12h3l-1.5 5 5-7h-3l2.5-5z" fill="#F27B1C" strokeLinejoin="round"/>
+        <path d="M11 5L8 12h3l-1.5 5 5-7h-3l2.5-5z" fill="var(--color-bolt)" strokeLinejoin="round"/>
       </g>
       {/* Notification bell */}
       <circle cx="68" cy="60" r="9" fill="#D1FAE5" stroke="#6EE7B7" strokeWidth="1.5"/>
@@ -87,8 +87,8 @@ export function ReportIllustration({ className }: { className?: string }) {
         <line x1="29" y1="25" x2="23" y2="29"/>
       </g>
       {/* Arrow */}
-      <path d="M46 28l8 0" stroke="#F27B1C" strokeWidth="2" strokeLinecap="round"/>
-      <path d="M52 24l4 4-4 4" stroke="#F27B1C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M46 28l8 0" stroke="var(--color-bolt)" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M52 24l4 4-4 4" stroke="var(--color-bolt)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       {/* Dashboard result */}
       <rect x="58" y="14" width="18" height="26" rx="3" fill="#D1FAE5" stroke="#6EE7B7" strokeWidth="1.5"/>
       {/* Mini bar chart */}

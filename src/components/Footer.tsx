@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-6">
         <div>
           <div className="flex items-center gap-2.5">
-            <Image src="/image.png" alt="Aifficient - AI Automatisering voor KMO's in België" width={32} height={32} className="size-8" />
+            <Image src="/image.png" alt="Aifficient" width={32} height={32} className="size-8" />
             <span className="font-display text-lg font-semibold tracking-tight">
               <span className="text-bolt-light">ai</span>
               <span className="text-white">fficient</span>

@@ -70,7 +70,7 @@ function Sidebar() {
 function StatsBar() {
   const stats = [
     { label: "Nieuwe emails", value: "12", color: "#4d8eff", bg: "rgba(77,142,255,0.08)" },
-    { label: "In behandeling", value: "5", color: "#F27B1C", bg: "rgba(242,123,28,0.08)" },
+    { label: "In behandeling", value: "5", color: "var(--color-bolt)", bg: "rgba(242,123,28,0.08)" },
     { label: "AI verwerkt", value: "34", color: "#22c55e", bg: "rgba(34,197,94,0.08)" },
     { label: "Gem. responstijd", value: "3.8", unit: "min", color: "#8b5cf6", bg: "rgba(139,92,246,0.08)" },
   ];
@@ -97,11 +97,11 @@ function StatsBar() {
 /* ── Email list ── */
 function EmailList() {
   const emails = [
-    { initials: "SJ", gradient: "linear-gradient(135deg,#F27B1C,#F89B4E)", from: "Sarah Johnson", subject: "Project kickoff next week", preview: "Hi, just following up on...", time: "10:24", selected: true, unread: true, badges: [] as { label: string; cls: string }[] },
+    { initials: "SJ", gradient: "linear-gradient(135deg,var(--color-bolt),var(--color-bolt-light))", from: "Sarah Johnson", subject: "Project kickoff next week", preview: "Hi, just following up on...", time: "10:24", selected: true, unread: true, badges: [] as { label: string; cls: string }[] },
     { initials: "AC", gradient: "linear-gradient(135deg,#4d8eff,#8b5cf6)", from: "info@acme.be", subject: "Invoice #2026-045", preview: "Please find attached the invoice...", time: "09:46", selected: false, unread: true, badges: [{ label: "Factuur", cls: "bg-blue-500/10 text-blue-600" }, { label: "AI verwerkt", cls: "bg-emerald-500/10 text-emerald-600" }] },
     { initials: "TD", gradient: "linear-gradient(135deg,#22c55e,#4d9fff)", from: "Thomas De Smet", subject: "Question about the proposal", preview: "Could you clarify the timeline...", time: "09:12", selected: false, unread: false, badges: [] as { label: string; cls: string }[], needsReply: true },
     { initials: "SR", gradient: "linear-gradient(135deg,#f07040,#f04060)", from: "Support Request", subject: "Auto-assigned to Emma", preview: "He reported seeing the notification...", time: "09:06", selected: false, unread: false, badges: [{ label: "Support", cls: "bg-purple-500/10 text-purple-600" }] },
-    { initials: "MD", gradient: "linear-gradient(135deg,#8b5cf6,#F27B1C)", from: "Marie Dubois", subject: "Budget approval", preview: "Towards a merged to details...", time: "08:32", selected: false, unread: false, badges: [{ label: "Approval", cls: "bg-amber-500/10 text-amber-600" }] },
+    { initials: "MD", gradient: "linear-gradient(135deg,#8b5cf6,var(--color-bolt))", from: "Marie Dubois", subject: "Budget approval", preview: "Towards a merged to details...", time: "08:32", selected: false, unread: false, badges: [{ label: "Approval", cls: "bg-amber-500/10 text-amber-600" }] },
     { initials: "LP", gradient: "linear-gradient(135deg,#22c55e,#00b8d9)", from: "Logistics Plus", subject: "Offerte transport Antwerpen", preview: "Graag ontvangen wij een offerte voor...", time: "08:10", selected: false, unread: true, badges: [{ label: "Offerte", cls: "bg-orange-500/10 text-orange-600" }, { label: "AI verwerkt", cls: "bg-emerald-500/10 text-emerald-600" }] },
   ];
   return (
@@ -159,7 +159,7 @@ function DetailPane() {
       <motion.div {...item(0)} className="px-4 py-3 border-b border-sand-200">
         <div className="text-[13px] font-bold text-sand-900 tracking-tight mb-2">Project kickoff next week</div>
         <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg grid place-items-center text-[9px] font-bold text-white" style={{ background: "linear-gradient(135deg,#F27B1C,#F89B4E)" }}>SJ</div>
+          <div className="w-7 h-7 rounded-lg grid place-items-center text-[9px] font-bold text-white" style={{ background: "linear-gradient(135deg,var(--color-bolt),var(--color-bolt-light))" }}>SJ</div>
           <div>
             <div className="text-[10px] font-semibold text-sand-900">Sarah Johnson <span className="font-normal text-sand-400">sarah@company.com</span></div>
             <div className="text-[9px] text-sand-400">team@company.com</div>

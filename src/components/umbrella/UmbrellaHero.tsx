@@ -16,9 +16,9 @@ function Check() {
 export function UmbrellaHero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      <Blob animate speed={18} fill="#F27B1C" className="!opacity-[0.05] absolute top-[10%] right-[5%] w-[380px] h-[500px]" />
-      <Blob animate speed={22} fill="#F27B1C" className="!opacity-[0.04] absolute top-[20%] left-[5%] w-[320px] h-[420px] rotate-[140deg]" />
-      <Blob animate speed={15} fill="#F27B1C" className="!opacity-[0.06] absolute bottom-[10%] right-[25%] w-[360px] h-[480px] rotate-[220deg]" />
+      <Blob animate speed={18} fill="var(--color-bolt)" className="!opacity-[0.05] absolute top-[10%] right-[5%] w-[380px] h-[500px]" />
+      <Blob animate speed={22} fill="var(--color-bolt)" className="!opacity-[0.04] absolute top-[20%] left-[5%] w-[320px] h-[420px] rotate-[140deg]" />
+      <Blob animate speed={15} fill="var(--color-bolt)" className="!opacity-[0.06] absolute bottom-[10%] right-[25%] w-[360px] h-[480px] rotate-[220deg]" />
 
       <div className="absolute inset-0 dot-bg opacity-50" />
       <div className="absolute inset-0 bg-gradient-to-br from-bolt/[0.03] via-transparent to-bolt/[0.02]" />

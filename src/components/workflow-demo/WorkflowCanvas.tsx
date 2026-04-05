@@ -37,13 +37,13 @@ function Arrow({ accent, label }: { accent?: boolean; label?: string }) {
       <div className="flex items-center">
         <motion.div
           className="h-px w-5 rounded-full"
-          style={{ background: accent ? "#F27B1C" : "#D1CFC9" }}
+          style={{ background: accent ? "var(--color-bolt)" : "#D1CFC9" }}
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.25, delay: 0.2 }}
         />
         <svg width="6" height="8" viewBox="0 0 6 8" fill="none">
-          <path d="M1 1L4.5 4L1 7" stroke={accent ? "#F27B1C" : "#D1CFC9"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M1 1L4.5 4L1 7" stroke={accent ? "var(--color-bolt)" : "#D1CFC9"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
     </div>

@@ -18,10 +18,10 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Animated blob shapes — clustered closer to center */}
-      <Blob animate speed={18} fill="#F27B1C" className="!opacity-[0.05] absolute top-[10%] right-[5%] w-[380px] h-[500px]" />
-      <Blob animate speed={22} fill="#F27B1C" className="!opacity-[0.04] absolute top-[20%] left-[5%] w-[320px] h-[420px] rotate-[140deg]" />
-      <Blob animate speed={15} fill="#F27B1C" className="!opacity-[0.06] absolute bottom-[10%] right-[25%] w-[360px] h-[480px] rotate-[220deg]" />
-      <Blob animate speed={20} variant={2} fill="#D46A12" className="!opacity-[0.07] absolute bottom-[15%] right-[15%] w-[400px] h-[520px] rotate-[190deg]" />
+      <Blob animate speed={18} fill="var(--color-bolt)" className="!opacity-[0.05] absolute top-[10%] right-[5%] w-[380px] h-[500px]" />
+      <Blob animate speed={22} fill="var(--color-bolt)" className="!opacity-[0.04] absolute top-[20%] left-[5%] w-[320px] h-[420px] rotate-[140deg]" />
+      <Blob animate speed={15} fill="var(--color-bolt)" className="!opacity-[0.06] absolute bottom-[10%] right-[25%] w-[360px] h-[480px] rotate-[220deg]" />
+      <Blob animate speed={20} variant={2} fill="var(--color-bolt-dark)" className="!opacity-[0.07] absolute bottom-[15%] right-[15%] w-[400px] h-[520px] rotate-[190deg]" />
 
       {/* Dot grid */}
       <div className="absolute inset-0 dot-bg opacity-50" />

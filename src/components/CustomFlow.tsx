@@ -14,7 +14,7 @@ const steps = [
       border: "border-bolt/20",
       icon: "bg-bolt/12 text-bolt",
       number: "text-bolt/40",
-      line: "#F27B1C",
+      line: "var(--color-bolt)",
     },
   },
   {
