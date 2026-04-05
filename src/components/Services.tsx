@@ -11,9 +11,9 @@ export function Services() {
       icon: Mail,
       title: "Gedeelde Inbox",
       subtitle: "Alle e-mails op één plek",
-      desc: "Eén overzichtelijke inbox voor je hele team. Gmail en Outlook worden automatisch gesynchroniseerd. Elke e-mail wordt geclassificeerd, gerouteerd en toegewezen — zonder manueel werk.",
+      desc: "Eén overzichtelijke inbox voor je hele team. Outlook wordt automatisch gesynchroniseerd. Elke e-mail wordt geclassificeerd, gerouteerd en toegewezen — zonder manueel werk.",
       features: [
-        "Gmail & Outlook synchronisatie",
+        "Outlook synchronisatie",
         "Automatische classificatie & routing",
         "Team-toewijzing per e-mail",
         "Volledige e-mailgeschiedenis per klant",
@@ -123,7 +123,7 @@ export function Services() {
           </div>
           <div className="flex-1 text-center sm:text-left">
             <h3 className="font-display text-lg font-semibold text-sand-900 mb-1">
-              Browser Extension voor Gmail & Outlook
+              Browser Extension voor Outlook
             </h3>
             <p className="text-sand-500">
               Werk rechtstreeks vanuit je inbox. De Aifficient sidebar toont AI-classificatie, suggesties en snelle acties — zonder van tab te wisselen.

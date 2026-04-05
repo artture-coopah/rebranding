@@ -9,8 +9,8 @@ import Link from "next/link";
 export function UmbrellaNav() {
   const [open, setOpen] = useState(false);
   const links = [
-    { label: "Producten", href: "#producten" },
-    { label: "Platform", href: "#platform" },
+    { label: "Wat we doen", href: "#aanbod" },
+    { label: "Visie", href: "#visie" },
     { label: "Team", href: "#team" },
   ];
 

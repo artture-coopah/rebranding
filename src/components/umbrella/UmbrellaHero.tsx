@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Layers, ChevronDown } from "lucide-react";
+import { ArrowRight, Zap, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { Blob } from "../Blob";
 import Link from "next/link";
@@ -32,8 +32,8 @@ export function UmbrellaHero() {
             transition={{ duration: 0.5 }}
             className="mb-8 inline-flex items-center gap-2 rounded-full border border-bolt/20 bg-bolt/5 px-4 py-1.5 text-sm text-bolt font-medium"
           >
-            <Layers size={14} />
-            Aifficient Platform
+            <Zap size={14} />
+            AI-software & automatisering
           </motion.div>
 
           {/* Heading */}
@@ -44,7 +44,7 @@ export function UmbrellaHero() {
             className="font-display font-semibold leading-[0.95] tracking-tight"
             style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.75rem)" }}
           >
-            De <span className="text-bolt italic">AI-laag</span> boven elk KMO-bedrijf.
+            Wij bouwen de <span className="text-bolt italic">AI-tools</span> die jouw bedrijf laten draaien.
           </motion.h1>
 
           {/* Subtitle */}
@@ -54,8 +54,8 @@ export function UmbrellaHero() {
             transition={{ duration: 0.7, delay: 0.25 }}
             className="mt-8 max-w-2xl mx-auto text-lg text-sand-500 leading-relaxed"
           >
-            Eén platform, meerdere AI-producten. Start met email, groei naar je volledige backoffice —{" "}
-            <strong className="text-sand-900 font-medium">binnen één ecosysteem</strong>.
+            Software, automations en AI-agents voor Belgische KMO&apos;s. We starten met je inbox en groeien mee met je bedrijf —{" "}
+            <strong className="text-sand-900 font-medium">stap voor stap, op maat</strong>.
           </motion.p>
 
           {/* CTAs */}
@@ -73,11 +73,10 @@ export function UmbrellaHero() {
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
             <a
-              href="#producten"
+              href="#contact"
               className="flex items-center gap-2 rounded-full border border-sand-300 px-8 py-4 text-base font-medium text-sand-500 transition-all hover:border-bolt/30 hover:text-sand-900"
             >
-              Bekijk alle producten
-              <ArrowRight size={16} />
+              Gratis adviesgesprek
             </a>
           </motion.div>
 
@@ -88,7 +87,7 @@ export function UmbrellaHero() {
             transition={{ duration: 0.7, delay: 0.55 }}
             className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
           >
-            {["Eén login voor alle producten", "Per-seat pricing", "Belgisch platform, lokale support"].map((t) => (
+            {["Eerste product live", "Custom automations op maat", "Belgisch team, lokale support"].map((t) => (
               <span key={t} className="flex items-center gap-2 text-sm text-sand-500">
                 <Check />
                 {t}

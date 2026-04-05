@@ -1017,7 +1017,7 @@ export default function Showcase() {
   }, [paused, active, slides.length]);
 
   return (
-    <section id="showcase" className="py-20 bg-sand-100/50">
+    <section id="showcase" className="py-20 surface-alt">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
         <h2 className="text-center text-[42px] font-display font-extrabold tracking-tight leading-[1.1] mb-3 text-sand-900">

@@ -8,7 +8,7 @@ export function Process() {
     {
       num: "01",
       title: "Probeer het gratis",
-      desc: "Maak een account aan en koppel je inbox. Gmail of Outlook — in een paar klikken verbonden.",
+      desc: "Maak een account aan en koppel je Outlook inbox — in een paar klikken verbonden.",
     },
     {
       num: "02",

@@ -14,7 +14,7 @@ export function Pricing() {
         "Gedeelde inbox (1 mailbox)",
         "AI-classificatie & triage",
         "Basis automation builder",
-        "Gmail & Outlook sync",
+        "Outlook sync",
         "Browser extension",
         "E-mail support",
       ],

@@ -8,6 +8,7 @@ import { Sectoren } from "@/components/Sectoren";
 import { Testimonials } from "@/components/Testimonials";
 import { Team } from "@/components/Team";
 import { FAQ } from "@/components/FAQ";
+import { Subsidies } from "@/components/umbrella/Subsidies";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { WaveDivider } from "@/components/WaveDivider";
@@ -26,11 +27,12 @@ export default function MailPage() {
       <Nav />
       <main>
         <Hero />
-        <Showcase />
         <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
+        <Showcase />
         <Services />
         <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-50)" />
         <CustomFlow />
+        <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
         <Process />
         <Sectoren />
         <Testimonials />
@@ -39,6 +41,7 @@ export default function MailPage() {
         <Team />
         <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
         <FAQ />
+        <Subsidies />
         <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-950)" />
         <CTA />
       </main>
