@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F04060"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.5 17.25H7.5v-2.1h9v2.1zm0-3.75H7.5v-2.1h9v2.1zm0-3.75H7.5V7.65h9v2.1z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Exact Online icon - red brand mark -->
+  <!-- Based on the Exact wordmark style with characteristic red color #D9252A -->
+  <!-- Using a stylized "E" letterform as the icon, matching their geometric style -->
+  <!-- The Exact logo features bold geometric text with horizontal striped elements -->
+  <rect x="8" y="8" width="48" height="48" rx="8" fill="#D9252A"/>
+  <!-- Stylized "E" in white matching Exact's bold geometric letterform -->
+  <path d="M18 18 h28 v6 h-20 v6 h16 v6 h-16 v6 h20 v6 h-28 z" fill="white"/>
+</svg>

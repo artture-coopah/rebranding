@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00B2B2"><circle cx="12" cy="12" r="12"/><path d="M7 8h10v2H7zm2 4h6v2H9zm1 4h4v2h-4z" fill="#fff"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Teamleader origami envelope icon - teal brand color #00B2B2 -->
+  <!-- Main diamond shape (rotated square) -->
+  <polygon points="10,32 32,54 54,32 32,10" fill="#00B2B2"/>
+  <!-- Upper-right triangular flap extending outward (the origami fold) -->
+  <polygon points="54,32 44,14 58,6" fill="#00B2B2"/>
+  <!-- Lighter inner triangle to create the fold/depth effect -->
+  <polygon points="32,10 54,32 44,14" fill="#33C7C7"/>
+</svg>

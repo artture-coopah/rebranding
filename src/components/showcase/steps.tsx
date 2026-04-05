@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const item = (i: number, d = 0.08) => ({ initial: { opacity: 0, y: 8 } as const, animate: { opacity: 1, y: 0 } as const, transition: { delay: 0.15 + i * d } });
 const pop = (i: number) => ({ initial: { opacity: 0, scale: 0.9 } as const, animate: { opacity: 1, scale: 1 } as const, transition: { delay: 0.3 + i * 0.1, type: "spring" as const, stiffness: 300 } });
@@ -314,37 +315,101 @@ const allIntegrations: Record<string, { name: string; color: string; icon: strin
 
 export function IntegrationView({ title, subtitle, integrations }: { title: string; subtitle: string; integrations: string[] }) {
   const items = integrations.map((k) => allIntegrations[k]).filter(Boolean);
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIdx((prev) => (prev + 2 >= items.length ? 0 : prev + 2));
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [items.length]);
+
+  const visible = items.slice(activeIdx, activeIdx + 2).length === 2
+    ? items.slice(activeIdx, activeIdx + 2)
+    : [items[activeIdx % items.length], items[(activeIdx + 1) % items.length]];
+
   return (
     <Card w="w-[360px]">
       <div className="p-5">
-        <div className="text-center mb-5">
+        <div className="text-center mb-4">
           <motion.div {...item(0)} className="text-[14px] font-bold text-sand-900">{title}</motion.div>
           <motion.div {...item(1)} className="text-[11px] text-sand-500 mt-0.5">{subtitle}</motion.div>
         </div>
-        <div className="flex flex-col items-center gap-3 mb-4">
+
+        {/* Aifficient logo */}
+        <div className="flex flex-col items-center gap-1 mb-1">
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: "spring", stiffness: 200, delay: 0.15 }} className="w-11 h-11 rounded-xl bg-bolt grid place-items-center shadow-lg shadow-bolt/20">
             <svg className="w-5 h-5 text-white" viewBox="0 0 164 149" fill="currentColor">
               <path d="M96 74.5C96 82.232 89.732 88.5 82 88.5 74.268 88.5 68 82.232 68 74.5 68 66.768 74.268 60.5 82 60.5 89.732 60.5 96 66.768 96 74.5Z"/>
               <path d="M150 75H82.5L14.5 134.5 82.5 14 150 134.5" stroke="currentColor" strokeWidth="6" fill="none"/>
             </svg>
           </motion.div>
-          <div className="flex flex-col items-center gap-0.5">
-            {[0, 1, 2].map((i) => (
-              <motion.div key={i} initial={{ opacity: 0 }} animate={{ opacity: [0.2, 0.8, 0.2] }} transition={{ delay: 0.4 + i * 0.15, duration: 1.5, repeat: Infinity }} className="w-0.5 h-2 rounded-full bg-bolt" />
-            ))}
-          </div>
         </div>
-        <div className="grid grid-cols-5 gap-2">
-          {items.map((intg, i) => (
-            <motion.div key={intg.name} initial={{ opacity: 0, y: 12, scale: 0.8 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ delay: 0.4 + i * 0.1, type: "spring", stiffness: 300, damping: 20 }} className="flex flex-col items-center gap-1.5 group">
-              <div className="relative w-12 h-12 rounded-xl bg-white border border-sand-200 shadow-sm grid place-items-center hover:shadow-md hover:border-sand-300 transition-all cursor-pointer">
-                <img src={`/integrations/${intg.icon}.svg`} alt={intg.name} className="w-6 h-6" loading="lazy" />
-              </div>
-              <span className="text-[8px] font-semibold text-sand-400 text-center leading-tight">{intg.name}</span>
+
+        {/* Data flow lines branching to two targets */}
+        <div className="relative h-10 w-full mb-1">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 320 40" fill="none" preserveAspectRatio="xMidYMid meet">
+            {/* Left branch */}
+            <path d="M160 0 Q160 20 100 38" stroke="currentColor" strokeWidth="1.5" className="text-bolt/30" fill="none" />
+            {/* Right branch */}
+            <path d="M160 0 Q160 20 220 38" stroke="currentColor" strokeWidth="1.5" className="text-bolt/30" fill="none" />
+            {/* Animated data dots — left */}
+            <circle r="3" className="fill-bolt">
+              <animateMotion dur="1.8s" repeatCount="indefinite" path="M160 0 Q160 20 100 38" />
+            </circle>
+            {/* Animated data dots — right */}
+            <circle r="3" className="fill-bolt">
+              <animateMotion dur="1.8s" repeatCount="indefinite" begin="0.3s" path="M160 0 Q160 20 220 38" />
+            </circle>
+          </svg>
+        </div>
+
+        {/* Integration icons — 2 at a time, auto-carousel */}
+        <div className="relative h-22 overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeIdx}
+              initial={{ opacity: 0, x: 60 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -60 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="absolute inset-0 flex items-start justify-center gap-8"
+            >
+              {visible.map((intg, i) => (
+                <div key={intg.name} className="flex flex-col items-center gap-2">
+                  <motion.div
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: i * 0.1, type: "spring", stiffness: 300, damping: 20 }}
+                    className="relative w-16 h-16 rounded-2xl bg-white border border-sand-200 shadow-md grid place-items-center"
+                  >
+                    <img src={`/integrations/${intg.icon}.svg`} alt={intg.name} className="w-9 h-9" loading="lazy" />
+                    {/* Incoming data pulse */}
+                    <motion.div
+                      className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-bolt"
+                      animate={{ scale: [0, 1.2, 0], opacity: [0, 1, 0] }}
+                      transition={{ duration: 1.8, repeat: Infinity, delay: i * 0.3 }}
+                    />
+                  </motion.div>
+                  <span className="text-[10px] font-semibold text-sand-500 text-center leading-tight">{intg.name}</span>
+                </div>
+              ))}
             </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Carousel dots */}
+        <div className="flex items-center justify-center gap-1.5 mt-2 mb-3">
+          {Array.from({ length: Math.ceil(items.length / 2) }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActiveIdx(i * 2)}
+              className={`w-1.5 h-1.5 rounded-full transition-all ${i * 2 === activeIdx ? "bg-bolt w-4" : "bg-sand-300"}`}
+            />
           ))}
         </div>
-        <motion.div {...item(4)} className="flex items-center justify-center gap-1.5 mt-4 text-[10px] font-semibold text-emerald-600">
+
+        <motion.div {...item(4)} className="flex items-center justify-center gap-1.5 text-[10px] font-semibold text-emerald-600">
           <motion.div animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 2, repeat: Infinity }} className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
           Data wordt automatisch gesynchroniseerd
         </motion.div>
