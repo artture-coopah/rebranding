@@ -118,7 +118,7 @@ export default async function CaseStudyPage({
                 url: "https://aifficient.be",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://aifficient.be/logo.png",
+                  url: "https://aifficient.be/image.png",
                 },
               },
               mainEntityOfPage: `https://aifficient.be/case-studies/${sector}`,

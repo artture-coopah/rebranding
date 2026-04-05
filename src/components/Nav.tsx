@@ -20,7 +20,7 @@ export function Nav() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-sand-50/90 backdrop-blur-sm border-b border-sand-200">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2.5">
-          <Image src="/logo.png" alt="Aifficient - AI Automatisering voor KMO's in België" width={36} height={36} className="rounded-lg size-9" />
+          <Image src="/image.png" alt="Aifficient - AI Automatisering voor KMO's in België" width={36} height={36} className="size-9" />
           <span className="font-display text-xl font-semibold tracking-tight">
             <span className="text-bolt">ai</span>
             <span className="text-sand-900">fficient</span>

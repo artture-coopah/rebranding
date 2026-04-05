@@ -1,12 +1,28 @@
 "use client";
 
-import { ArrowRight, Zap, ChevronDown, Timer, PiggyBank, CalendarDays, Layers } from "lucide-react";
+import { ArrowRight, Zap, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
-import { TeamCapacityVisual } from "./TeamCapacityVisual";
+import { HeroMockup } from "./HeroMockup";
+import { Blob } from "./Blob";
+import { toolLogos } from "./ToolLogos";
+
+function Check() {
+  return (
+    <svg className="w-[18px] h-[18px] text-bolt shrink-0" viewBox="0 0 20 20" fill="currentColor">
+      <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"/>
+    </svg>
+  );
+}
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Animated blob shapes — clustered closer to center */}
+      <Blob animate speed={18} fill="#F27B1C" className="!opacity-[0.05] absolute top-[10%] right-[5%] w-[380px] h-[500px]" />
+      <Blob animate speed={22} fill="#F27B1C" className="!opacity-[0.04] absolute top-[20%] left-[5%] w-[320px] h-[420px] rotate-[140deg]" />
+      <Blob animate speed={15} fill="#F27B1C" className="!opacity-[0.06] absolute bottom-[10%] right-[25%] w-[360px] h-[480px] rotate-[220deg]" />
+      <Blob animate speed={20} variant={2} fill="#D46A12" className="!opacity-[0.07] absolute bottom-[15%] right-[15%] w-[400px] h-[520px] rotate-[190deg]" />
+
       {/* Dot grid */}
       <div className="absolute inset-0 dot-bg opacity-50" />
 
@@ -21,15 +37,9 @@ export function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.8, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
         />
-        <motion.div
-          className="absolute top-[15%] left-[10%] w-48 h-48 rounded-full bg-bolt/[0.05] blur-2xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 0.6 }}
-        />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-32 pb-20 w-full">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-8 pt-32 pb-20 w-full">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-16">
           {/* Left: Text content */}
           <div className="flex-1 min-w-0">
@@ -41,7 +51,7 @@ export function Hero() {
               className="mb-8 inline-flex items-center gap-2 rounded-full border border-bolt/20 bg-bolt/5 px-4 py-1.5 text-sm text-bolt font-medium"
             >
               <Zap size={14} />
-              AI-automatisering voor KMO&apos;s in Belgi&euml;
+              AI-powered email automation
             </motion.div>
 
             {/* Heading */}
@@ -49,11 +59,11 @@ export function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-display font-semibold leading-[0.92] tracking-tight"
-              style={{ fontSize: "clamp(2.75rem, 5.5vw, 5rem)" }}
+              className="font-display font-semibold leading-[0.95] tracking-tight"
+              style={{ fontSize: "clamp(2.25rem, 4vw, 3.25rem)" }}
             >
-              Jouw team kan het dubbele aan.{" "}
-              <span className="text-bolt italic">Zonder aan te werven.</span>
+              Stop Managing Emails.{" "}
+              <span className="text-bolt italic">Start Running Your Business.</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -63,8 +73,8 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.25 }}
               className="mt-8 max-w-xl text-lg text-sand-500 leading-relaxed"
             >
-              Je mensen zijn te duur voor simpele administratie en repetitief overtypwerk. Wij automatiseren deze processen met AI-systemen die werken met jouw bestaande tools — zodat je team weer kan focussen op de{" "}
-              <strong className="text-sand-900 font-medium">zaken die er echt toe doen</strong>.
+              Every email should trigger action — automatically. From inbox chaos to total productivity —{" "}
+              <strong className="text-sand-900 font-medium">powered by AI</strong>.
             </motion.p>
 
             {/* CTAs */}
@@ -78,51 +88,63 @@ export function Hero() {
                 href="#contact"
                 className="group flex items-center gap-2 rounded-full bg-bolt px-8 py-4 text-base font-medium text-white transition-all hover:bg-bolt-dark hover:shadow-xl hover:shadow-bolt/15 hover:scale-[1.02]"
               >
-                Plan je gratis adviesgesprek
+                Get Started
                 <ArrowRight
                   size={18}
                   className="transition-transform group-hover:translate-x-1"
                 />
               </a>
               <a
-                href="#diensten"
+                href="#showcase"
                 className="flex items-center gap-2 rounded-full border border-sand-300 px-8 py-4 text-base font-medium text-sand-500 transition-all hover:border-bolt/30 hover:text-sand-900"
               >
-                Bekijk onze diensten
+                Watch Demo
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"/></svg>
               </a>
+            </motion.div>
+
+            {/* Checkmarks */}
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.55 }}
+              className="mt-8 flex flex-col gap-2"
+            >
+              {["Save 10+ hours per employee/month", "Fast & easy setup", "No credit card required"].map((t) => (
+                <span key={t} className="flex items-center gap-2 text-sm text-sand-500">
+                  <Check />
+                  {t}
+                </span>
+              ))}
+            </motion.div>
+
+            {/* Tool logos */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.7 }}
+              className="mt-10 flex items-center gap-6"
+            >
+              <span className="text-[11px] uppercase tracking-wider text-sand-400 font-medium whitespace-nowrap">
+                Werkt met je tools
+              </span>
+              <div className="flex items-center gap-4">
+                {["Slack", "Google", "Teams", "Odoo", "Excel", "Zapier"].map((tool) => {
+                  const Logo = toolLogos[tool];
+                  return Logo ? <Logo key={tool} className="w-5 h-5 opacity-50 hover:opacity-100 transition-opacity" /> : null;
+                })}
+              </div>
             </motion.div>
           </div>
 
-          {/* Right: Team capacity visual */}
-          <div className="mt-16 lg:mt-0 flex-shrink-0">
-            <TeamCapacityVisual />
+          {/* Right: Mockup */}
+          <div className="mt-16 lg:mt-0 hidden lg:block w-[520px] shrink-0">
+            <div className="relative">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-bolt/[0.06] blur-[80px] pointer-events-none" />
+              <HeroMockup />
+            </div>
           </div>
         </div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-8 border-t border-sand-200 pt-10"
-        >
-          {[
-            { value: "30%", label: "Minder tijd aan repetitief werk", icon: Timer },
-            { value: "\u20AC50K+", label: "Bespaard vs. extra personeel", icon: PiggyBank },
-            { value: "2\u20136", label: "Weken tot resultaat", icon: CalendarDays },
-            { value: "50+", label: "Werkprocessen geautomatiseerd", icon: Layers },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-bolt/8">
-                <stat.icon size={18} className="text-bolt" />
-              </div>
-              <div className="font-display text-3xl sm:text-4xl font-semibold text-bolt">
-                {stat.value}
-              </div>
-              <div className="mt-1 text-sm text-sand-500">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
       </div>
 
       {/* Scroll indicator */}
