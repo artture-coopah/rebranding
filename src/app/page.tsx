@@ -1,39 +1,24 @@
-import { Nav } from "@/components/Nav";
-import { Hero } from "@/components/Hero";
-import { Services } from "@/components/Services";
-import { Pricing } from "@/components/Pricing";
-import { Process } from "@/components/Process";
-import { Sectoren } from "@/components/Sectoren";
-import { Testimonials } from "@/components/Testimonials";
+import { UmbrellaNav } from "@/components/umbrella/UmbrellaNav";
+import { UmbrellaHero } from "@/components/umbrella/UmbrellaHero";
+import { Products } from "@/components/umbrella/Products";
+import { Vision } from "@/components/umbrella/Vision";
 import { Team } from "@/components/Team";
-import { FAQ } from "@/components/FAQ";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { WaveDivider } from "@/components/WaveDivider";
-import Showcase from "@/components/Showcase";
-import { CustomFlow } from "@/components/CustomFlow";
 
 export default function Home() {
   return (
     <>
-      <Nav />
+      <UmbrellaNav />
       <main>
-        <Hero />
-        <Showcase />
+        <UmbrellaHero />
         <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
-        <Services />
+        <Products />
         <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-50)" />
-        <CustomFlow />
-        <Process />
-        <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
-        <Sectoren />
-        <Testimonials />
-        <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-50)" />
-        <Pricing />
+        <Vision />
         <Team />
-        <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
-        <FAQ />
-        <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-950)" />
+        <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-950)" />
         <CTA />
       </main>
       <Footer />

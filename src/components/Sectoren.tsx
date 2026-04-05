@@ -15,7 +15,7 @@ export function Sectoren() {
   ];
 
   return (
-    <section className="relative py-20 px-6">
+    <section className="relative py-20 px-6 surface-alt">
       <div className="mx-auto max-w-6xl">
         <motion.div
           variants={stagger}

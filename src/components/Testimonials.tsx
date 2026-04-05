@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export function Testimonials() {
   return (
-    <section className="relative py-28 px-6">
+    <section className="relative py-28 px-6 surface-alt">
       <div className="mx-auto max-w-6xl">
         {/* Client testimonial */}
         <motion.div

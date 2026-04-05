@@ -18,11 +18,11 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL("https://aifficient.be"),
   title: {
-    default: "Aifficient Mail | Van inbox naar actie — AI email platform voor KMO's",
+    default: "Aifficient | De AI-laag boven elk KMO-bedrijf",
     template: "%s | Aifficient",
   },
   description:
-    "Aifficient Mail leest, sorteert en verwerkt je e-mails automatisch. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's. Vanaf €19/seat/maand.",
+    "Eén platform, meerdere AI-producten. Email, support, backoffice en automation — binnen één ecosysteem voor Belgische KMO's.",
   keywords: [
     "email automatisering KMO",
     "AI email platform",
