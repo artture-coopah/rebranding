@@ -48,7 +48,7 @@ export function FAQ() {
   ];
 
   return (
-    <section id="faq" className="relative py-28 px-6">
+    <section id="faq" className="relative py-28 px-6 bg-sand-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

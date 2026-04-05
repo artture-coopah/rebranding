@@ -11,7 +11,7 @@ import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { WaveDivider } from "@/components/WaveDivider";
 import Showcase from "@/components/Showcase";
-import { WorkflowDemo } from "@/components/workflow-demo";
+import { CustomFlow } from "@/components/CustomFlow";
 
 export default function Home() {
   return (
@@ -20,11 +20,12 @@ export default function Home() {
       <main>
         <Hero />
         <Showcase />
-        {/* <WorkflowDemo /> */}
+        <CustomFlow />
         <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
         <Services />
         <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-50)" />
         <Pricing />
+        <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
         <Process />
         <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-50)" />
         <Sectoren />
@@ -32,6 +33,7 @@ export default function Home() {
         <Team />
         <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
         <FAQ />
+        <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-950)" />
         <CTA />
       </main>
       <Footer />
