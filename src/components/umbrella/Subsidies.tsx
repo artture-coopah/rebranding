@@ -1,6 +1,6 @@
 "use client";
 
-import { Wrench, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeIn, stagger } from "../ui/animations";
 
@@ -15,7 +15,7 @@ const subsidies = [
   //   linkLabel: "Meer info op VLAIO.be",
   // },
   {
-    icon: Wrench,
+    icon: "vlaio",
     title: "Investeringsaftrek — Custom Automations",
     percentage: "20%",
     max: "fiscale aftrek",
@@ -66,12 +66,10 @@ export function Subsidies() {
             <motion.div
               key={s.title}
               variants={fadeIn}
-              className="card p-8 flex flex-col"
+              className="card p-8 flex flex-col relative"
             >
+              <img src="/vlaio.png" alt="VLAIO" className="absolute top-4 right-4 h-20 object-contain opacity-100" />
               <div className="flex items-center gap-4 mb-5">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-bolt/8">
-                  <s.icon size={24} className="text-bolt" />
-                </div>
                 <div>
                   <div className="font-display text-2xl font-semibold text-bolt">
                     {s.percentage}
