@@ -6,7 +6,13 @@ export function Footer() {
       <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-6">
         <div>
           <div className="flex items-center gap-2.5">
-            <Image src="/image.png" alt="Aifficient" width={32} height={32} className="size-8" />
+            <Image
+              src="/logo.svg"
+              alt="Aifficient"
+              width={32}
+              height={32}
+              className="size-8 scale-[0.7]"
+            />
             <span className="font-display text-lg font-semibold tracking-tight">
               <span className="text-bolt-light">ai</span>
               <span className="text-white">fficient</span>
@@ -18,22 +24,13 @@ export function Footer() {
           </p>
         </div>
         <div className="flex items-center gap-6 text-sm">
-          <a
-            href="#diensten"
-            className="hover:text-white transition-colors"
-          >
+          <a href="#diensten" className="hover:text-white transition-colors">
             Platform
           </a>
-          <a
-            href="#prijzen"
-            className="hover:text-white transition-colors"
-          >
+          <a href="#prijzen" className="hover:text-white transition-colors">
             Prijzen
           </a>
-          <a
-            href="#werkwijze"
-            className="hover:text-white transition-colors"
-          >
+          <a href="#werkwijze" className="hover:text-white transition-colors">
             Werkwijze
           </a>
           <a href="#faq" className="hover:text-white transition-colors">

@@ -342,12 +342,9 @@ export function IntegrationView({ title, subtitle }: { title: string; subtitle: 
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 200, delay: 0.15 }}
-              className="relative w-10 h-10 rounded-2xl bg-bolt grid place-items-center shadow-lg shadow-bolt/20"
+              className="relative w-10 h-10 rounded-2xl bg-white grid place-items-center shadow-lg shadow-sand-300/40"
             >
-              <svg className="w-5 h-5 text-white" viewBox="0 0 164 149" fill="currentColor">
-                <path d="M96 74.5C96 82.232 89.732 88.5 82 88.5 74.268 88.5 68 82.232 68 74.5 68 66.768 74.268 60.5 82 60.5 89.732 60.5 96 66.768 96 74.5Z"/>
-                <path d="M150 75H82.5L14.5 134.5 82.5 14 150 134.5" stroke="currentColor" strokeWidth="6" fill="none"/>
-              </svg>
+              <img src="/logo.png" alt="Logo" className="w-6 h-6 object-contain" />
             </motion.div>
           </div>
         </div>

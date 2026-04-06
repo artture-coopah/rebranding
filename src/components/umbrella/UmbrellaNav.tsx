@@ -19,7 +19,7 @@ export function UmbrellaNav() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2.5">
           <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt="Aifficient"
             width={36}
             height={36}

@@ -71,6 +71,7 @@ export function Team() {
                   src={person.photo}
                   alt={person.name}
                   fill
+                  sizes="96px"
                   className="object-cover"
                 />
               </div>
