@@ -53,7 +53,7 @@ function Sidebar() {
       <div className="px-2.5 py-2 border-t border-sand-200 flex items-center gap-2">
         <div className="w-6 h-6 rounded-lg bg-bolt/10 grid place-items-center text-[8px] font-bold text-bolt">TV</div>
         <div>
-          <div className="text-[9px] font-semibold text-sand-900">Tuur Vanbiervliet</div>
+          <div className="text-[9px] font-semibold text-sand-900">Tuur</div>
           <div className="text-[8px] text-sand-400">Team attached</div>
         </div>
       </div>
