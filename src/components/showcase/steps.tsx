@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 const item = (i: number, d = 0.08) => ({ initial: { opacity: 0, y: 8 } as const, animate: { opacity: 1, y: 0 } as const, transition: { delay: 0.15 + i * d } });
 const pop = (i: number) => ({ initial: { opacity: 0, scale: 0.9 } as const, animate: { opacity: 1, scale: 1 } as const, transition: { delay: 0.3 + i * 0.1, type: "spring" as const, stiffness: 300 } });
 
-function Card({ children, w = "w-[360px]" }: { children: React.ReactNode; w?: string }) {
+function Card({ children, w = "max-w-[360px]" }: { children: React.ReactNode; w?: string }) {
   return (
-    <motion.div initial={{ opacity: 0, x: -14 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }} className={`bg-white rounded-2xl border border-sand-200 shadow-lg ${w} mx-auto overflow-hidden`}>
+    <motion.div initial={{ opacity: 0, x: -14 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }} className={`bg-white rounded-2xl border border-sand-200 shadow-lg w-full ${w} mx-auto overflow-hidden`}>
       {children}
     </motion.div>
   );
@@ -255,7 +255,7 @@ export function RecordView({ label, badge, fields }: { label: string; badge: str
 /* ── DASHBOARD ── */
 export function DashboardView({ title, rows }: { title: string; rows: { id: string; col2: string; col3: string; status: string; statusCls: string; highlight?: boolean }[] }) {
   return (
-    <Card w="w-[400px]">
+    <Card w="max-w-[400px]">
       <div className="px-4 py-3 border-b border-sand-200 flex items-center justify-between">
         <h3 className="text-sm font-bold text-sand-900">{title}</h3>
         <span className="text-[11px] text-sand-400 font-medium">Vandaag</span>
@@ -318,7 +318,7 @@ export function IntegrationView({ title, subtitle }: { title: string; subtitle: 
   const items = allIntegrationKeys.map((k) => allIntegrations[k]);
 
   return (
-    <Card w="w-[380px]">
+    <Card w="max-w-[380px]">
       <div className="p-5">
         <div className="text-center mb-4">
           <motion.div {...item(0)} className="text-[14px] font-bold text-sand-900">{title}</motion.div>
