@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/layout/Nav";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
-import { Pricing } from "@/components/sections/Pricing";
+// import { Pricing } from "@/components/sections/Pricing";
 import { Process } from "@/components/sections/Process";
 import { Sectoren } from "@/components/sections/Sectoren";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -16,9 +16,9 @@ import Showcase from "@/components/sections/Showcase";
 import { CustomFlow } from "@/components/sections/CustomFlow";
 
 export const metadata: Metadata = {
-  title: "Aifficient Mail | Van inbox naar actie. AI email platform voor KMO's",
+  title: "Aifficient | Van inbox naar actie. AI email platform voor KMO's",
   description:
-    "Aifficient Mail leest, sorteert en verwerkt je e-mails automatisch. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's.",
+    "Aifficient leest, sorteert en verwerkt je e-mails automatisch. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's.",
 };
 
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
         <Sectoren />
         <Testimonials />
         <WaveDivider from="var(--color-sand-100)" to="var(--color-sand-50)" />
-        <Pricing />
+        {/* <Pricing /> */}
         <Team />
         <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
         <FAQ />

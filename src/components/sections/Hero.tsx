@@ -50,7 +50,7 @@ export function Hero() {
               className="mb-8 inline-flex items-center gap-2 rounded-full border border-bolt/20 bg-bolt/5 px-4 py-1.5 text-sm text-bolt font-medium"
             >
               <Zap size={14} />
-              Aifficient Mail: van inbox naar actie
+              Aifficient: van inbox naar actie
             </motion.div>
 
             {/* Heading */}
@@ -72,7 +72,7 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.25 }}
               className="mt-8 max-w-xl text-lg text-sand-500 leading-relaxed"
             >
-              Aifficient Mail leest, sorteert en verwerkt je e-mails automatisch. Jouw team focust op klanten.{" "}
+              Aifficient leest, sorteert en verwerkt je e-mails automatisch. Jouw team focust op klanten.{" "}
               <strong className="text-sand-900 font-medium">de AI doet de rest</strong>.
             </motion.p>
 

@@ -80,7 +80,7 @@ export function UmbrellaHero() {
               href="/mail"
               className="group flex items-center gap-2 rounded-full bg-bolt px-8 py-4 text-base font-medium text-white transition-all hover:bg-bolt-dark hover:shadow-xl hover:shadow-bolt/15 hover:scale-[1.02]"
             >
-              Ontdek Aifficient Mail
+              Ontdek Aifficient
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
             <a

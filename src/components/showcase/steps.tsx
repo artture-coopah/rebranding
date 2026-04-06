@@ -45,7 +45,6 @@ export function Step01Sidebar() {
           <img src="/logo.svg" alt="aifficient" className="w-4.5 h-4.5 object-contain" />
         </div>
         <span className="text-[15px] font-bold text-sand-900 tracking-tight"><span className="text-bolt">ai</span>fficient</span>
-        <span className="text-[11px] font-medium text-sand-400 ml-0.5">Mail</span>
       </div>
       <div className="px-2 pt-3 pb-1">
         <div className="bg-bolt text-white rounded-[10px] px-4 py-2 text-[13px] font-semibold flex items-center gap-2 shadow-md shadow-bolt/15">

@@ -47,7 +47,7 @@ export function UmbrellaNav() {
             href="/mail"
             className="rounded-full border border-sand-300 px-5 py-2.5 text-sm font-medium text-sand-600 transition-all hover:border-bolt/30 hover:text-sand-900"
           >
-            Aifficient Mail
+            Aifficient
           </Link>
           <a
             href="#contact"
@@ -92,7 +92,7 @@ export function UmbrellaNav() {
                 className="text-sand-500 hover:text-sand-900 transition-colors"
                 onClick={() => setOpen(false)}
               >
-                Aifficient Mail
+                Aifficient
               </Link>
               <a
                 href="#contact"

@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     locale: "nl_BE",
     url: "https://aifficient.be",
     siteName: "Aifficient",
-    title: "Aifficient Mail | Van inbox naar actie. AI email platform voor KMO's",
+    title: "Aifficient | Van inbox naar actie. AI email platform voor KMO's",
     description:
       "Elke e-mail wordt automatisch actie. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's.",
     images: [
@@ -55,13 +55,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Aifficient Mail - AI email platform voor KMO's in België",
+        alt: "Aifficient - AI email platform voor KMO's in België",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aifficient Mail | Van inbox naar actie. AI email platform voor KMO's",
+    title: "Aifficient | Van inbox naar actie. AI email platform voor KMO's",
     description:
       "Elke e-mail wordt automatisch actie. Gedeelde inbox, AI-agents en automation builder.",
     images: ["/og-image.png"],
@@ -103,7 +103,7 @@ export default function RootLayout({
               name: "Aifficient",
               url: "https://aifficient.be",
               description:
-                "Aifficient Mail: AI email platform dat e-mails automatisch leest, sorteert en verwerkt. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's.",
+                "Aifficient: AI email platform dat e-mails automatisch leest, sorteert en verwerkt. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's.",
               areaServed: {
                 "@type": "Country",
                 name: "Belgium",

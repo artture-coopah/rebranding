@@ -34,7 +34,7 @@ export function Products() {
           </motion.p>
         </motion.div>
 
-        {/* Aifficient Mail — featured card */}
+        {/* Aifficient — featured card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export function Products() {
                 SaaS product — Live
               </div>
               <h3 className="font-display text-2xl font-semibold text-sand-900 mb-3">
-                Aifficient Mail
+                Aifficient
               </h3>
               <p className="text-sand-500 leading-relaxed mb-6">
                 Een AI-email platform dat je inbox omzet in actie. Gedeelde inbox, AI-agents en een automation builder — klaar om te gebruiken, zonder implementatieproject.
@@ -74,7 +74,7 @@ export function Products() {
                 href="/mail"
                 className="group flex items-center gap-2 text-sm font-semibold text-bolt hover:gap-3 transition-all"
               >
-                Ontdek Aifficient Mail
+                Ontdek Aifficient
                 <ArrowRight size={16} />
               </Link>
             </div>

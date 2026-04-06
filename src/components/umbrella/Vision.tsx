@@ -7,7 +7,7 @@ const stats = [
   {
     number: "1",
     label: "Product live",
-    detail: "Aifficient Mail — klaar om te gebruiken",
+    detail: "Aifficient — klaar om te gebruiken",
   },
   {
     number: "\u221E",

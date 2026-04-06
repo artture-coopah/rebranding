@@ -11,11 +11,7 @@ export function UmbrellaFAQ() {
   const faqs = [
     {
       q: "Wat doet Aifficient precies?",
-      a: "Aifficient bouwt AI-software en automatisering voor Belgische KMO\u2019s. Ons eerste product is Aifficient Mail \u2014 een AI-email platform. Daarnaast bouwen we custom automations en maatwerksoftware op maat van jouw bedrijf.",
-    },
-    {
-      q: "Ik heb een specifieke oplossing nodig \u2014 kan dat?",
-      a: "Zeker. Naast Aifficient Mail bouwen we ook custom automations en maatwerksoftware. Van complexe integraties tot volledige applicaties \u2014 we bekijken samen wat je nodig hebt en bouwen het op maat. Neem contact op voor een vrijblijvend gesprek.",
+      a: "Aifficient bouwt AI-software en automatisering voor Belgische KMO\u2019s. Ons eerste product is Aifficient \u2014 een AI-email platform. Daarnaast bouwen we custom automations en maatwerksoftware op maat van jouw bedrijf.",
     },
     {
       q: "Werken jullie met onze bestaande tools?",

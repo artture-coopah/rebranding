@@ -37,19 +37,7 @@ export function CTA() {
       <div className="absolute top-0 left-[-10%] w-[500px] h-[500px] rounded-full bg-bolt/[0.06] blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-[-5%] w-[300px] h-[300px] rounded-full bg-bolt/[0.04] blur-[100px] pointer-events-none" />
 
-      {/* Decorative circuit/bolt pattern */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.04]">
-        <svg className="absolute -left-20 top-1/2 -translate-y-1/2 w-[400px] h-[400px]" viewBox="0 0 400 400" fill="none">
-          <path d="M200 40L160 200h60l-40 160 120-180h-60l60-140z" stroke="white" strokeWidth="2" strokeLinejoin="round" />
-          <circle cx="200" cy="200" r="180" stroke="white" strokeWidth="1" strokeDasharray="8 12" />
-          <circle cx="200" cy="200" r="120" stroke="white" strokeWidth="1" strokeDasharray="4 8" />
-        </svg>
-        <svg className="absolute -right-10 top-1/2 -translate-y-1/2 w-[300px] h-[300px]" viewBox="0 0 300 300" fill="none">
-          <circle cx="150" cy="150" r="140" stroke="white" strokeWidth="1" strokeDasharray="6 10" />
-          <circle cx="150" cy="150" r="80" stroke="white" strokeWidth="1" strokeDasharray="4 8" />
-          <path d="M150 50L130 150h40l-20 100 60-110h-40l30-90z" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
-        </svg>
-      </div>
+
 
       <div className="relative z-10 mx-auto max-w-5xl">
         <div className="grid lg:grid-cols-2 gap-16 items-start">

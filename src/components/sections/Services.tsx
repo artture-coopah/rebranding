@@ -68,7 +68,7 @@ export function Services() {
             variants={fadeIn}
             className="mt-4 text-sand-500 max-w-2xl mx-auto text-lg"
           >
-            Aifficient Mail combineert een gedeelde inbox, AI-agents en een automation builder tot één platform dat je e-mails omzet in actie.
+            Aifficient combineert een gedeelde inbox, AI-agents en een automation builder tot één platform dat je e-mails omzet in actie.
           </motion.p>
         </motion.div>
 

@@ -271,7 +271,7 @@ export function StyleDebugBar() {
               ))}
             </select>
             <div className="mt-2 p-2 rounded-lg bg-white/5 text-center" style={{ fontFamily: `"${displayFont}", serif` }}>
-              <span className="text-lg font-semibold">Aifficient Mail</span>
+              <span className="text-lg font-semibold">Aifficient</span>
             </div>
           </div>
 
