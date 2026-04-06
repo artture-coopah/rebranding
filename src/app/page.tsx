@@ -16,7 +16,7 @@ import Showcase from "@/components/sections/Showcase";
 import { CustomFlow } from "@/components/sections/CustomFlow";
 
 export const metadata: Metadata = {
-  title: "Aifficient Mail | Van inbox naar actie — AI email platform voor KMO's",
+  title: "Aifficient Mail | Van inbox naar actie. AI email platform voor KMO's",
   description:
     "Aifficient Mail leest, sorteert en verwerkt je e-mails automatisch. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's.",
 };
@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <main>
+      <main id="main">
         <Hero />
         <WaveDivider from="var(--color-sand-50)" to="var(--color-sand-100)" />
         <Showcase />

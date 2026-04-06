@@ -27,7 +27,7 @@ export function Testimonials() {
               </div>
               <div>
                 <div className="font-display font-semibold text-sand-900">
-                  Erwin — The Jewel and The Lake
+                  Erwin, The Jewel and The Lake
                 </div>
                 <div className="text-sm text-sand-500">
                   Adults-only boutique B&B · 9,3/10 Booking.com · Jinja, Uganda
@@ -38,7 +38,7 @@ export function Testimonials() {
             {/* Quote */}
             <blockquote className="mb-8">
               <p className="font-display text-lg sm:text-xl text-sand-800 leading-relaxed">
-                We begonnen dit hotel omdat we van gastvrijheid houden, niet van inbox management. Aifficient geeft ons die tijd terug. Gasten voelen zich welkom nog voor ze aankomen — en wij kunnen focussen op wat we het liefst doen.
+                We begonnen dit hotel omdat we van gastvrijheid houden, niet van inbox management. Aifficient geeft ons die tijd terug. Gasten voelen zich welkom nog voor ze aankomen, en wij kunnen focussen op wat we het liefst doen.
               </p>
             </blockquote>
 
@@ -51,7 +51,7 @@ export function Testimonials() {
                 <div className="rounded-xl bg-sand-100 p-4">
                   <div className="font-display text-2xl font-semibold text-sand-900 mb-1">24/7</div>
                   <div className="text-sm text-sand-600 leading-snug">
-                    Boekingsaanvragen automatisch beantwoord — in vier talen, ook om 3 uur 's nachts
+                    Boekingsaanvragen automatisch beantwoord in vier talen, ook om 3 uur 's nachts
                   </div>
                 </div>
                 <div className="rounded-xl bg-sand-100 p-4">

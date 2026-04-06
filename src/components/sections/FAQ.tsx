@@ -23,7 +23,7 @@ export function FAQ() {
     },
     {
       q: "Vervangen jullie mijn medewerkers?",
-      a: "Absoluut niet, en dat is ook niet ons doel. Wij versterken je team. AI neemt de taken over die niemand graag doet: kopieerwerk, opvolging, rapportage. Je mensen krijgen hun tijd terug voor het werk waar ze goed in zijn en energie van krijgen. Het resultaat: een gemotiveerder team dat meer bereikt.",
+      a: "Nee, en dat willen we ook niet. Wij versterken je team. AI neemt de taken over die niemand graag doet: kopieerwerk, opvolging, rapportage. Je mensen krijgen hun tijd terug voor het werk waar ze goed in zijn en energie van krijgen. Het resultaat: een gemotiveerder team dat meer bereikt.",
     },
     {
       q: "Hoeveel kost Aifficient Mail?",
@@ -46,8 +46,8 @@ export function FAQ() {
       a: "ChatGPT is een generieke chatbot. Aifficient Mail is een compleet platform: gedeelde inbox, AI-agents en een automation builder die specifiek zijn afgestemd op jouw e-mailworkflows. Het verschil: ChatGPT beantwoordt losse vragen, Aifficient verwerkt je e-mails automatisch van ontvangst tot actie.",
     },
     {
-      q: "Ik heb een specifieke oplossing nodig — kan dat?",
-      a: "Zeker. Naast Aifficient Mail bouwen we ook custom automations en maatwerksoftware. Van complexe integraties tot volledige applicaties — we bekijken samen wat je nodig hebt en bouwen het op maat. Neem contact op voor een vrijblijvend gesprek.",
+      q: "Ik heb een specifieke oplossing nodig. Kan dat?",
+      a: "Zeker. Naast Aifficient Mail bouwen we ook custom automations en maatwerksoftware. Van complexe integraties tot volledige applicaties: we bekijken samen wat je nodig hebt en bouwen het op maat. Neem contact op voor een vrijblijvend gesprek.",
     },
   ];
 
@@ -104,6 +104,7 @@ export function FAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                aria-expanded={openIndex === i}
                 className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-sand-100/50 transition-colors"
               >
                 <span className="font-display font-medium pr-4 text-sand-900">

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Aifficient",
   },
   description:
-    "Eén platform, meerdere AI-producten. Email, support, backoffice en automation — binnen één ecosysteem voor Belgische KMO's.",
+    "Eén platform, meerdere AI-producten. Email, support, backoffice en automation in één ecosysteem voor Belgische KMO's.",
   keywords: [
     "email automatisering KMO",
     "AI email platform",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     locale: "nl_BE",
     url: "https://aifficient.be",
     siteName: "Aifficient",
-    title: "Aifficient Mail | Van inbox naar actie — AI email platform voor KMO's",
+    title: "Aifficient Mail | Van inbox naar actie. AI email platform voor KMO's",
     description:
       "Elke e-mail wordt automatisch actie. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's.",
     images: [
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aifficient Mail | Van inbox naar actie — AI email platform voor KMO's",
+    title: "Aifficient Mail | Van inbox naar actie. AI email platform voor KMO's",
     description:
       "Elke e-mail wordt automatisch actie. Gedeelde inbox, AI-agents en automation builder.",
     images: ["/og-image.png"],
@@ -103,7 +103,7 @@ export default function RootLayout({
               name: "Aifficient",
               url: "https://aifficient.be",
               description:
-                "Aifficient Mail — AI email platform dat e-mails automatisch leest, sorteert en verwerkt. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's.",
+                "Aifficient Mail: AI email platform dat e-mails automatisch leest, sorteert en verwerkt. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's.",
               areaServed: {
                 "@type": "Country",
                 name: "Belgium",
@@ -120,6 +120,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
+        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-4 focus:left-4 focus:bg-bolt focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">
+          Ga naar hoofdinhoud
+        </a>
         {children}
         {process.env.NODE_ENV === "development" && process.env.NEXT_PUBLIC_DEV_TOOLS !== "false" && <StyleDebugBar />}
       </body>

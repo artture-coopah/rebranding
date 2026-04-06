@@ -8,7 +8,7 @@ const steps = [
     number: "01",
     icon: <Search size={22} />,
     title: "Analyse",
-    desc: "We brengen je huidige proces in kaart — bottlenecks, manuele stappen en integraties.",
+    desc: "We brengen je huidige proces in kaart: bottlenecks, manuele stappen en integraties.",
     color: {
       bg: "bg-bolt/8",
       border: "border-bolt/20",

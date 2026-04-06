@@ -11,7 +11,7 @@ export function Services() {
       icon: Mail,
       title: "Gedeelde Inbox",
       subtitle: "Alle e-mails op één plek",
-      desc: "Eén overzichtelijke inbox voor je hele team. Outlook wordt automatisch gesynchroniseerd. Elke e-mail wordt geclassificeerd, gerouteerd en toegewezen — zonder manueel werk.",
+      desc: "Eén overzichtelijke inbox voor je hele team. Outlook wordt automatisch gesynchroniseerd. Elke e-mail wordt geclassificeerd, gerouteerd en toegewezen. Zonder manueel werk.",
       features: [
         "Outlook synchronisatie",
         "Automatische classificatie & routing",
@@ -23,7 +23,7 @@ export function Services() {
       icon: Bot,
       title: "AI-Agents",
       subtitle: "Slim verwerken, niet alleen sorteren",
-      desc: "AI-agents die je e-mails niet alleen lezen, maar ook begrijpen en verwerken. Van automatische triage en data-extractie tot slimme antwoorden — jouw team controleert, de AI doet het voorwerk.",
+      desc: "AI-agents die je e-mails niet alleen lezen, maar ook begrijpen en verwerken. Van automatische triage en data-extractie tot slimme antwoorden. Jouw team controleert, de AI doet het voorwerk.",
       features: [
         "Automatische triage & prioritering",
         "Data-extractie uit e-mails en bijlagen",
@@ -35,7 +35,7 @@ export function Services() {
       icon: Workflow,
       title: "Automation Builder",
       subtitle: "Bouw je eigen workflows",
-      desc: "Een visuele drag-and-drop builder waarmee je complete workflows opstelt. Van e-mail ontvangen tot actie uitvoeren — zonder code, volledig op maat van jouw processen.",
+      desc: "Een visuele drag-and-drop builder waarmee je complete workflows opstelt. Van e-mail ontvangen tot actie uitvoeren, zonder code en volledig op maat van jouw processen.",
       features: [
         "Visuele drag-and-drop editor",
         "Triggers op e-mail, tijd of conditie",
@@ -126,7 +126,7 @@ export function Services() {
               Browser Extension voor Outlook
             </h3>
             <p className="text-sand-500">
-              Werk rechtstreeks vanuit je inbox. De Aifficient sidebar toont AI-classificatie, suggesties en snelle acties — zonder van tab te wisselen.
+              Werk rechtstreeks vanuit je inbox. De Aifficient sidebar toont AI-classificatie, suggesties en snelle acties. Je blijft gewoon in Outlook.
             </p>
           </div>
           <div className="flex items-center gap-3 shrink-0">

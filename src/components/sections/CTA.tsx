@@ -6,7 +6,7 @@ import { useState } from "react";
 import { fadeIn, stagger } from "../ui/animations";
 
 export function CTA() {
-  const [form, setForm] = useState({ naam: "Tuur Van Holen", bedrijf: "Aifficient", email: "tuur.vanholen@outlook.com", bericht: "Test bericht" });
+  const [form, setForm] = useState({ naam: "", bedrijf: "", email: "", bericht: "" });
   const [verzonden, setVerzonden] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");

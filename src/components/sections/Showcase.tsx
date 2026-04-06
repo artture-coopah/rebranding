@@ -185,7 +185,7 @@ const flows: Flow[] = [
         component: (
           <FeedbackView
             to="info@logisticsplus.be"
-            subject="Ontbrekende referentie — Transport Antwerpen-Gent"
+            subject="Ontbrekende referentie: Transport Antwerpen-Gent"
             body={
               <>
                 <p className="mb-2">Beste,</p>
@@ -362,7 +362,7 @@ const flows: Flow[] = [
           "De factuur-PDF wordt via OCR gelezen. Tabellen, bedragen en BTW-nummers worden gestructureerd.",
         component: (
           <ParserView
-            title="Factuur #2026-045 — ACME Services"
+            title="Factuur #2026-045 · ACME Services"
             snippet="Hierbij onze factuur voor de geleverde diensten in maart. Bedrag: EUR 2.450,00 excl. BTW..."
             fields={[
               { label: "PDF OCR", done: true },
@@ -416,7 +416,7 @@ const flows: Flow[] = [
           "De financiele medewerker reviewt de factuur met een klik. Goedkeuren voor boeking.",
         component: (
           <ApprovalView
-            title="Factuur ACME Services — \u20AC 2.450,00"
+            title="Factuur ACME Services · \u20AC 2.450,00"
             description="Alle velden gevalideerd. Klaar voor boeking in het boekhoudpakket."
           />
         ),
@@ -518,7 +518,7 @@ const flows: Flow[] = [
           "De AI zoekt klantgeschiedenis, eerdere tickets en kennisbank-artikelen op als context.",
         component: (
           <ParserView
-            title="Login werkt niet meer — Jan Vermeer"
+            title="Login werkt niet meer · Jan Vermeer"
             snippet="Sinds gisteren krijg ik een 403 error bij het inloggen. Ik heb mijn wachtwoord al gereset..."
             fields={[
               { label: "Klantprofiel", done: true },
@@ -574,7 +574,7 @@ const flows: Flow[] = [
         component: (
           <CompleteView
             title="Ticket opgelost"
-            subtitle="Support ticket #4821 — Jan Vermeer"
+            subtitle="Support ticket #4821 · Jan Vermeer"
             stats={[
               { value: "4 min", label: "Response time" },
               { value: "0", label: "Escalaties" },
@@ -696,7 +696,7 @@ const flows: Flow[] = [
         component: (
           <ApprovalView
             title="Orderbevestiging Veerle Brouwers"
-            description="3x Model Pro — \u20AC 747,00 incl. BTW. Levering binnen 2 werkdagen."
+            description="3x Model Pro, \u20AC 747,00 incl. BTW. Levering binnen 2 werkdagen."
           />
         ),
       },
@@ -780,7 +780,7 @@ const flows: Flow[] = [
               {
                 initials: "RT",
                 color: "from-amber-400 to-orange-500",
-                from: "Robin Thijs — LinkedIn",
+                from: "Robin Thijs (LinkedIn)",
                 subject: "Connectie + vraag",
                 preview: "Hey, zag jullie post over AI...",
                 time: "08:45",
@@ -1019,7 +1019,7 @@ export default function Showcase() {
           See it in <span className="text-bolt italic">action</span>
         </h2>
         <p className="text-center text-lg text-sand-500 max-w-[640px] mx-auto mb-4">
-          Kies jouw sector en ontdek hoe aifficient e-mails omzet in actie — van inbox tot
+          Kies jouw sector en ontdek hoe Aifficient e-mails omzet in actie, van inbox tot
           resultaat.
         </p>
 

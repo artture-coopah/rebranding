@@ -23,12 +23,7 @@ function Sidebar() {
   return (
     <div className="w-[160px] shrink-0 bg-sand-50 border-r border-sand-200 flex flex-col">
       <div className="h-[42px] flex items-center px-3 gap-2 border-b border-sand-200">
-        <div className="w-5 h-5 rounded bg-bolt grid place-items-center">
-          <svg className="w-3 h-3 text-white" viewBox="0 0 164 149" fill="currentColor">
-            <path d="M96 74.5C96 82.232 89.732 88.5 82 88.5 74.268 88.5 68 82.232 68 74.5 68 66.768 74.268 60.5 82 60.5 89.732 60.5 96 66.768 96 74.5Z"/>
-            <path d="M150 75H82.5L14.5 134.5 82.5 14 150 134.5" stroke="currentColor" strokeWidth="6" fill="none"/>
-          </svg>
-        </div>
+        <img src="/logo.svg" alt="Aifficient" className="w-3.5 h-3.5 object-contain" />
         <span className="text-[11px] font-bold text-sand-900 tracking-tight"><span className="text-bolt">ai</span>fficient</span>
         <span className="text-[9px] font-medium text-sand-400">Mail</span>
       </div>
@@ -207,28 +202,30 @@ function DetailPane() {
 /* ── Main mockup ── */
 export function HeroMockup() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.1 }}
-      className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-sand-200 bg-sand-50"
-      style={{ fontFamily: "var(--font-body), 'Inter', sans-serif" }}
-    >
-      <div className="bg-white border-b border-sand-200 px-3 py-2 flex items-center gap-1.5">
-        <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-        <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
-        <div className="w-2.5 h-2.5 rounded-full bg-[#28ca41]" />
-      </div>
-      <div className="flex h-[380px]">
-        <Sidebar />
-        <div className="flex-1 flex flex-col min-w-0">
-          <StatsBar />
-          <div className="flex flex-1 min-h-0">
-            <EmailList />
-            <DetailPane />
+    <div className="w-full" style={{ aspectRatio: "680 / 412" }}>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        className="w-[680px] origin-top-left rounded-2xl overflow-hidden shadow-2xl ring-1 ring-sand-200 bg-sand-50"
+        style={{ fontFamily: "var(--font-body), 'Inter', sans-serif", transform: "scale(calc(520 / 680))" }}
+      >
+        <div className="bg-white border-b border-sand-200 px-3 py-2 flex items-center gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#28ca41]" />
+        </div>
+        <div className="flex h-[380px]">
+          <Sidebar />
+          <div className="flex-1 flex flex-col min-w-0">
+            <StatsBar />
+            <div className="flex flex-1 min-h-0">
+              <EmailList />
+              <DetailPane />
+            </div>
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }
