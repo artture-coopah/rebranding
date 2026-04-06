@@ -1,19 +1,19 @@
 "use client";
 
-import { GraduationCap, Wrench, ExternalLink } from "lucide-react";
+import { Wrench, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeIn, stagger } from "../ui/animations";
 
 const subsidies = [
-  {
-    icon: GraduationCap,
-    title: "KMO-portefeuille — Opleiding",
-    percentage: "30-45%",
-    max: "max. €7.500/jaar",
-    desc: "Onze AI- en automatiseringsopleidingen komen in aanmerking voor de VLAIO KMO-portefeuille. Kleine ondernemingen krijgen 30% subsidie, digitalisering-opleidingen zelfs tot 45%.",
-    link: "https://www.vlaio.be/nl/subsidies-financiering/kmo-portefeuille",
-    linkLabel: "Meer info op VLAIO.be",
-  },
+  // {
+  //   icon: GraduationCap,
+  //   title: "KMO-portefeuille — Opleiding",
+  //   percentage: "30-45%",
+  //   max: "max. €7.500/jaar",
+  //   desc: "Onze AI- en automatiseringsopleidingen komen in aanmerking voor de VLAIO KMO-portefeuille. Kleine ondernemingen krijgen 30% subsidie, digitalisering-opleidingen zelfs tot 45%.",
+  //   link: "https://www.vlaio.be/nl/subsidies-financiering/kmo-portefeuille",
+  //   linkLabel: "Meer info op VLAIO.be",
+  // },
   {
     icon: Wrench,
     title: "Investeringsaftrek — Custom Automations",
@@ -60,7 +60,7 @@ export function Subsidies() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid sm:grid-cols-2 gap-6"
+          className="max-w-xl mx-auto"
         >
           {subsidies.map((s) => (
             <motion.div

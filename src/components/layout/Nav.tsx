@@ -10,7 +10,7 @@ export function Nav() {
   const links = [
     { label: "Platform", href: "#diensten" },
     { label: "Voorbeelden", href: "#voorbeelden" },
-    { label: "Prijzen", href: "#prijzen" },
+    { label: "Plannen", href: "#prijzen" },
     { label: "Werkwijze", href: "#werkwijze" },
     { label: "FAQ", href: "#faq" },
   ];
