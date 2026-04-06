@@ -167,6 +167,10 @@ export function StyleDebugBar() {
     navigator.clipboard.writeText(css);
   };
 
+  const enabled = process.env.NEXT_PUBLIC_DEV_TOOLS !== "false";
+
+  if (!enabled) return null;
+
   if (!open) {
     return (
       <button

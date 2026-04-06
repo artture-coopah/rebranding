@@ -2,7 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeIn, stagger } from "./animations";
+import { fadeIn, stagger } from "../ui/animations";
 
 export function Comparison() {
   const rows = [

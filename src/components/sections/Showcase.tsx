@@ -14,7 +14,7 @@ import {
   DashboardView,
   CompleteView,
   IntegrationView,
-} from "./showcase/steps";
+} from "../showcase/steps";
 
 const INTERVAL = 5500;
 

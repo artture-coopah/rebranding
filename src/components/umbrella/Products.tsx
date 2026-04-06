@@ -2,7 +2,7 @@
 
 import { Mail, Settings, Code, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeIn, stagger } from "../animations";
+import { fadeIn, stagger } from "../ui/animations";
 import Link from "next/link";
 
 export function Products() {

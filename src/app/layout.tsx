@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Outfit } from "next/font/google";
 import "./globals.css";
-import { StyleDebugBar } from "@/components/StyleDebugBar";
+import { StyleDebugBar } from "@/components/ui/StyleDebugBar";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Aifficient",
     title: "Aifficient Mail | Van inbox naar actie — AI email platform voor KMO's",
     description:
-      "Elke e-mail wordt automatisch actie. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's. Vanaf €19/seat/maand.",
+      "Elke e-mail wordt automatisch actie. Gedeelde inbox, AI-agents en automation builder voor Belgische KMO's.",
     images: [
       {
         url: "/og-image.png",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Aifficient Mail | Van inbox naar actie — AI email platform voor KMO's",
     description:
-      "Elke e-mail wordt automatisch actie. Gedeelde inbox, AI-agents en automation builder. Vanaf €19/seat/maand.",
+      "Elke e-mail wordt automatisch actie. Gedeelde inbox, AI-agents en automation builder.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -121,7 +121,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         {children}
-        {process.env.NODE_ENV === "development" && <StyleDebugBar />}
+        {process.env.NODE_ENV === "development" && process.env.NEXT_PUBLIC_DEV_TOOLS !== "false" && <StyleDebugBar />}
       </body>
     </html>
   );

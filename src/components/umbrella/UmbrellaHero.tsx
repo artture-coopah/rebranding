@@ -2,7 +2,7 @@
 
 import { ArrowRight, Zap, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
-import { Blob } from "../Blob";
+import { Blob } from "../ui/Blob";
 import Link from "next/link";
 
 function Check() {

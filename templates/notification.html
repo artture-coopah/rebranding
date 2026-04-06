@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nieuwe aanvraag</title>
+</head>
+<body style="margin:0;padding:0;background-color:#FAF9F6;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1E1D1B;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#FAF9F6;padding:40px 20px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;">
+
+          <!-- Header -->
+          <tr>
+            <td style="padding:0 0 32px 0;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="font-size:24px;font-weight:700;color:#1E1D1B;letter-spacing:-0.5px;">
+                    <img src="https://aifficient.be/image.png" alt="Aifficient" width="36" height="36" style="vertical-align:middle;margin-right:8px;border-radius:8px;" />
+                    <span style="vertical-align:middle;"><span style="color:#F27B1C;">ai</span>fficient</span>
+                  </td>
+                  <td align="right" style="font-size:12px;color:#A3A09A;text-transform:uppercase;letter-spacing:1px;">
+                    Nieuwe aanvraag
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Card -->
+          <tr>
+            <td style="background-color:#ffffff;border:1px solid #E3E2DD;border-radius:16px;overflow:hidden;">
+
+              <!-- Orange accent bar -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="height:4px;background:linear-gradient(90deg,#F27B1C,#F89B4E);font-size:0;line-height:0;">&nbsp;</td>
+                </tr>
+              </table>
+
+              <!-- Title -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding:32px 32px 8px 32px;">
+                    <h1 style="margin:0;font-size:22px;font-weight:700;color:#1E1D1B;">
+                      Nieuw contactformulier
+                    </h1>
+                    <p style="margin:8px 0 0 0;font-size:14px;color:#78756F;">
+                      Iemand wil een adviesgesprek aanvragen via de website.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Divider -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding:16px 32px;">
+                    <hr style="border:none;border-top:1px solid #F0EFEB;margin:0;" />
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Details -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="padding:0 32px;">
+                <tr>
+                  <td style="padding:8px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="100" style="font-size:12px;color:#A3A09A;text-transform:uppercase;letter-spacing:0.5px;padding:6px 0;vertical-align:top;">Naam</td>
+                        <td style="font-size:15px;color:#1E1D1B;font-weight:600;padding:6px 0;vertical-align:top;">{{naam}}</td>
+                      </tr>
+                      <tr>
+                        <td width="100" style="font-size:12px;color:#A3A09A;text-transform:uppercase;letter-spacing:0.5px;padding:6px 0;vertical-align:top;">Bedrijf</td>
+                        <td style="font-size:15px;color:#1E1D1B;font-weight:600;padding:6px 0;vertical-align:top;">{{bedrijf}}</td>
+                      </tr>
+                      <tr>
+                        <td width="100" style="font-size:12px;color:#A3A09A;text-transform:uppercase;letter-spacing:0.5px;padding:6px 0;vertical-align:top;">E-mail</td>
+                        <td style="font-size:15px;padding:6px 0;vertical-align:top;">
+                          <a href="mailto:{{email}}" style="color:#F27B1C;text-decoration:none;font-weight:600;">{{email}}</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Message block -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding:8px 32px 24px 32px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="font-size:12px;color:#A3A09A;text-transform:uppercase;letter-spacing:0.5px;padding:6px 0;">Bericht</td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#FAF9F6;border:1px solid #F0EFEB;border-radius:10px;padding:16px;font-size:14px;color:#4A4844;line-height:1.6;">
+                          {{bericht}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- CTA button -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding:0 32px 32px 32px;">
+                    <a href="mailto:{{email}}?subject=Re: Adviesgesprek%20aanvraag%20-%20{{bedrijf}}" style="display:inline-block;background-color:#F27B1C;color:#ffffff;font-size:14px;font-weight:600;text-decoration:none;padding:12px 28px;border-radius:999px;">
+                      Beantwoord aanvraag &rarr;
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:24px 0 0 0;text-align:center;">
+              <p style="margin:0;font-size:12px;color:#A3A09A;">
+                Dit is een automatische notificatie van aifficient.be
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

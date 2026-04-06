@@ -2,7 +2,7 @@
 
 import { Zap, PlugZap, Users, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeIn, stagger } from "./animations";
+import { fadeIn, stagger } from "../ui/animations";
 
 export function WhyUs() {
   const benefits = [

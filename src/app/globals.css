@@ -14,10 +14,10 @@
   --color-sand-900: #1E1D1B;
   --color-sand-950: #121110;
 
-  /* Accent — vibrant orange (from logo lightning bolt) */
-  --color-bolt: #F27B1C;
-  --color-bolt-light: #F89B4E;
-  --color-bolt-dark: #D46A12;
+  /* Accent — blue */
+  --color-bolt: #3B82F6;
+  --color-bolt-light: #60A5FA;
+  --color-bolt-dark: #2563EB;
 
   /* Fonts */
   --font-display: var(--font-fraunces);
@@ -126,6 +126,6 @@ body {
 /* ─── Selection ──────────────────────────────────────────── */
 
 ::selection {
-  background: rgba(242, 123, 28, 0.15);
+  background: rgba(59, 130, 246, 0.15);
   color: var(--color-sand-900);
 }

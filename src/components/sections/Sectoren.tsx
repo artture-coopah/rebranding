@@ -2,7 +2,7 @@
 
 import { Truck, Calculator, Building2, Briefcase, Factory, Users } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeIn, stagger } from "./animations";
+import { fadeIn, stagger } from "../ui/animations";
 
 export function Sectoren() {
   const sectors = [

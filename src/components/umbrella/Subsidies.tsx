@@ -2,7 +2,7 @@
 
 import { GraduationCap, Wrench, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeIn, stagger } from "../animations";
+import { fadeIn, stagger } from "../ui/animations";
 
 const subsidies = [
   {

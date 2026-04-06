@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { caseStudies } from "@/lib/case-studies-data";
-import { CaseStudyGrid } from "@/components/case-study-grid";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
+import { CaseStudyGrid } from "@/components/sections/case-study-grid";
+import { Nav } from "@/components/layout/Nav";
+import { Footer } from "@/components/layout/Footer";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {

@@ -2,13 +2,13 @@
 
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeIn, stagger } from "./animations";
+import { fadeIn, stagger } from "../ui/animations";
 import {
   MailIllustration,
   InvoiceIllustration,
   FollowUpIllustration,
   ReportIllustration,
-} from "./Illustrations";
+} from "../ui/Illustrations";
 
 export function Examples() {
   const examples = [

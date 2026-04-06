@@ -2,8 +2,8 @@
 
 import { Mail, Bot, Workflow, Puzzle, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeIn, stagger } from "./animations";
-import { toolLogos } from "./ToolLogos";
+import { fadeIn, stagger } from "../ui/animations";
+import { toolLogos } from "../ui/ToolLogos";
 
 export function Services() {
   const pillars = [

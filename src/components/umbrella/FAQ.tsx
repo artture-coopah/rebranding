@@ -3,7 +3,7 @@
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { fadeIn, stagger } from "../animations";
+import { fadeIn, stagger } from "../ui/animations";
 
 export function UmbrellaFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);

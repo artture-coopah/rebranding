@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { fadeIn, stagger } from "./animations";
+import { fadeIn, stagger } from "../ui/animations";
 
 export function Process() {
   const steps = [

@@ -3,7 +3,7 @@
 import { ArrowRight, Zap, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { HeroMockup } from "./HeroMockup";
-import { Blob } from "./Blob";
+import { Blob } from "../ui/Blob";
 
 function Check() {
   return (

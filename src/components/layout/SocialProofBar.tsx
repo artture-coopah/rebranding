@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { toolLogos } from "./ToolLogos";
+import { toolLogos } from "../ui/ToolLogos";
 
 export function SocialProofBar() {
   return (

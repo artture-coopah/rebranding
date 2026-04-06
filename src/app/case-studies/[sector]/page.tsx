@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { caseStudies, getCaseStudy } from "@/lib/case-studies-data";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
+import { Nav } from "@/components/layout/Nav";
+import { Footer } from "@/components/layout/Footer";
 import { ArrowRight, Check, ChevronDown } from "lucide-react";
 import { notFound } from "next/navigation";
 

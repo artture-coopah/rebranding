@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: aifficient-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: aifficient
+      POSTGRES_USER: aifficient
+      POSTGRES_PASSWORD: aifficient
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5434:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aifficient -d aifficient"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres-data:

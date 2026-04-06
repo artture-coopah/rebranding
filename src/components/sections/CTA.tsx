@@ -3,20 +3,32 @@
 import { Check, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { fadeIn, stagger } from "./animations";
+import { fadeIn, stagger } from "../ui/animations";
 
 export function CTA() {
   const [form, setForm] = useState({ naam: "", bedrijf: "", email: "", bericht: "" });
   const [verzonden, setVerzonden] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Adviesgesprek aanvraag van ${form.naam} - ${form.bedrijf}`);
-    const body = encodeURIComponent(
-      `Naam: ${form.naam}\nBedrijf: ${form.bedrijf}\nE-mail: ${form.email}\n\nBericht:\n${form.bericht || "(geen bericht)"}`
-    );
-    window.location.href = `mailto:hello@aifficient.be?subject=${subject}&body=${body}`;
-    setVerzonden(true);
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Er ging iets mis.");
+      setVerzonden(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Er ging iets mis.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -103,9 +115,9 @@ export function CTA() {
                 <div className="mb-4 mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-bolt/20">
                   <Check size={28} className="text-bolt-light" />
                 </div>
-                <h3 className="font-display text-xl font-semibold mb-2">Je e-mailclient opent zo</h3>
+                <h3 className="font-display text-xl font-semibold mb-2">Bedankt voor je aanvraag!</h3>
                 <p className="text-white/60 text-sm">
-                  Verstuur de e-mail en we nemen binnen 24 uur contact met je op.
+                  We nemen binnen 24 uur contact met je op.
                 </p>
               </div>
             ) : (
@@ -165,12 +177,16 @@ export function CTA() {
                     placeholder="Vertel kort waar je hulp bij zoekt"
                   />
                 </div>
+                {error && (
+                  <p className="text-red-400 text-sm">{error}</p>
+                )}
                 <button
                   type="submit"
-                  className="w-full group flex items-center justify-center gap-2 rounded-full bg-bolt px-8 py-4 text-base font-semibold text-white transition-all hover:bg-bolt-dark hover:shadow-xl hover:shadow-bolt/20 hover:scale-[1.02]"
+                  disabled={loading}
+                  className="w-full group flex items-center justify-center gap-2 rounded-full bg-bolt px-8 py-4 text-base font-semibold text-white transition-all hover:bg-bolt-dark hover:shadow-xl hover:shadow-bolt/20 hover:scale-[1.02] disabled:opacity-50 disabled:pointer-events-none"
                 >
-                  Vraag je gratis adviesgesprek aan
-                  <Send size={18} className="transition-transform group-hover:translate-x-1" />
+                  {loading ? "Verzenden..." : "Vraag je gratis adviesgesprek aan"}
+                  {!loading && <Send size={18} className="transition-transform group-hover:translate-x-1" />}
                 </button>
               </form>
             )}

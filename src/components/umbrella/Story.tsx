@@ -2,7 +2,7 @@
 
 import { Heart, Eye, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeIn, stagger } from "../animations";
+import { fadeIn, stagger } from "../ui/animations";
 
 const chapters = [
   {
