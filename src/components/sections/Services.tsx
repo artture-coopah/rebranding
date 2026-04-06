@@ -3,7 +3,6 @@
 import { Mail, Bot, Workflow, Puzzle, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeIn, stagger } from "../ui/animations";
-import { toolLogos } from "../ui/ToolLogos";
 
 export function Services() {
   const pillars = [
@@ -130,10 +129,9 @@ export function Services() {
             </p>
           </div>
           <div className="flex items-center gap-3 shrink-0">
-            {["Outlook", "Teams"].map((tool) => {
-              const Logo = toolLogos[tool];
-              return Logo ? <Logo key={tool} className="w-6 h-6 opacity-60" /> : null;
-            })}
+            {["outlook", "teams"].map((tool) => (
+              <img key={tool} src={`/integrations/${tool}.svg`} alt={tool} className="w-6 h-6 opacity-60" />
+            ))}
           </div>
         </motion.div>
 
