@@ -104,13 +104,19 @@ export function StyleDebugBar() {
     } catch { /* ignore */ }
   }, []);
 
-  // Apply styles
+  // Apply styles via injected <style> tag to reliably override @layer theme
   useEffect(() => {
-    const root = document.documentElement;
-    for (const [key, val] of Object.entries(colors)) {
-      root.style.setProperty(key, val);
+    const id = "style-debug-overrides";
+    let tag = document.getElementById(id) as HTMLStyleElement | null;
+    if (!tag) {
+      tag = document.createElement("style");
+      tag.id = id;
+      document.head.appendChild(tag);
     }
-    root.style.setProperty("--card-radius", `${borderRadius}px`);
+    const vars = Object.entries(colors)
+      .map(([k, v]) => `${k}: ${v};`)
+      .join("\n  ");
+    tag.textContent = `:root {\n  ${vars}\n  --card-radius: ${borderRadius}px;\n}`;
   }, [colors, borderRadius]);
 
   const loadFont = useCallback((font: string) => {
