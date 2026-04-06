@@ -4,7 +4,6 @@ import { ArrowRight, Zap, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { HeroMockup } from "./HeroMockup";
 import { Blob } from "./Blob";
-import { toolLogos } from "./ToolLogos";
 
 function Check() {
   return (
@@ -129,10 +128,9 @@ export function Hero() {
                 Werkt met je tools
               </span>
               <div className="flex items-center gap-4">
-                {["Outlook", "Teams", "Odoo", "Teamleader", "Billit", "Excel"].map((tool) => {
-                  const Logo = toolLogos[tool];
-                  return Logo ? <Logo key={tool} className="w-5 h-5 opacity-50 hover:opacity-100 transition-opacity" /> : null;
-                })}
+                {["outlook", "teams", "odoo", "teamleader", "billit", "excel", "exact", "hubspot", "salesforce", "slack", "sheets"].map((tool) => (
+                  <img key={tool} src={`/integrations/${tool}.svg`} alt={tool} className="w-5 h-5 opacity-50 hover:opacity-100 transition-opacity" loading="lazy" />
+                ))}
               </div>
             </motion.div>
           </div>

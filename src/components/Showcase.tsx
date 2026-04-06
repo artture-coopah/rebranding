@@ -292,7 +292,6 @@ const flows: Flow[] = [
           <IntegrationView
             title="Automatisch gesynchroniseerd"
             subtitle="TRN-2026-0847 doorgestuurd naar je tools"
-            integrations={["teamleader", "odoo", "excel", "slack", "exact"]}
           />
         ),
       },
@@ -450,7 +449,6 @@ const flows: Flow[] = [
           <IntegrationView
             title="Automatisch geboekt"
             subtitle="INV-2026-045 gesynchroniseerd"
-            integrations={["exact", "odoo", "excel", "sheets", "teamleader"]}
           />
         ),
       },
@@ -594,7 +592,6 @@ const flows: Flow[] = [
           <IntegrationView
             title="Ticket gesynchroniseerd"
             subtitle="#4821 doorgestuurd naar je tools"
-            integrations={["hubspot", "salesforce", "slack", "teamleader", "sheets"]}
           />
         ),
       },
@@ -731,7 +728,6 @@ const flows: Flow[] = [
           <IntegrationView
             title="Order gesynchroniseerd"
             subtitle="ORD-2026-8847 doorgestuurd"
-            integrations={["odoo", "exact", "excel", "slack", "outlook"]}
           />
         ),
       },
@@ -942,7 +938,6 @@ const flows: Flow[] = [
           <IntegrationView
             title="Lead gesynchroniseerd"
             subtitle="LEAD-2026-0412 in je CRM"
-            integrations={["hubspot", "salesforce", "teamleader", "outlook", "teams"]}
           />
         ),
       },

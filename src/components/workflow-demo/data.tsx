@@ -160,7 +160,6 @@ export const workflows: Workflow[] = [
             <IntegrationView
               title="Automatisch gesynchroniseerd"
               subtitle="TRN-2026-0847 doorgestuurd naar je tools"
-              integrations={["teamleader", "odoo", "excel", "slack", "exact"]}
             />
           ),
         },
@@ -276,7 +275,6 @@ export const workflows: Workflow[] = [
             <IntegrationView
               title="Automatisch geboekt"
               subtitle="INV-2026-045 gesynchroniseerd"
-              integrations={["exact", "odoo", "excel", "sheets", "teamleader"]}
             />
           ),
         },
@@ -397,7 +395,6 @@ export const workflows: Workflow[] = [
             <IntegrationView
               title="Ticket gesynchroniseerd"
               subtitle="#4821 doorgestuurd naar je tools"
-              integrations={["hubspot", "salesforce", "slack", "teamleader", "sheets"]}
             />
           ),
         },
@@ -520,7 +517,6 @@ export const workflows: Workflow[] = [
             <IntegrationView
               title="Lead gesynchroniseerd"
               subtitle="LEAD-2026-0412 in je CRM"
-              integrations={["hubspot", "salesforce", "teamleader", "outlook", "teams"]}
             />
           ),
         },

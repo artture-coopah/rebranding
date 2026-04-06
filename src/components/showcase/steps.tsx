@@ -312,19 +312,21 @@ const allIntegrations: Record<string, { name: string; color: string; icon: strin
   sheets: { name: "Sheets", color: "#0F9D58", icon: "sheets" },
 };
 
-export function IntegrationView({ title, subtitle, integrations }: { title: string; subtitle: string; integrations: string[] }) {
-  const items = integrations.map((k) => allIntegrations[k]).filter(Boolean);
+const allIntegrationKeys = Object.keys(allIntegrations);
+
+export function IntegrationView({ title, subtitle }: { title: string; subtitle: string }) {
+  const items = allIntegrationKeys.map((k) => allIntegrations[k]);
 
   return (
-    <Card w="w-[360px]">
+    <Card w="w-[380px]">
       <div className="p-5">
-        <div className="text-center mb-5">
+        <div className="text-center mb-4">
           <motion.div {...item(0)} className="text-[14px] font-bold text-sand-900">{title}</motion.div>
           <motion.div {...item(1)} className="text-[11px] text-sand-500 mt-0.5">{subtitle}</motion.div>
         </div>
 
         {/* Hub: Aifficient logo with radial pulse */}
-        <div className="flex justify-center mb-4">
+        <div className="flex justify-center mb-3">
           <div className="relative">
             <motion.div
               className="absolute inset-0 rounded-2xl bg-bolt/10"
@@ -340,7 +342,7 @@ export function IntegrationView({ title, subtitle, integrations }: { title: stri
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 200, delay: 0.15 }}
-              className="relative w-11 h-11 rounded-2xl bg-bolt grid place-items-center shadow-lg shadow-bolt/20"
+              className="relative w-10 h-10 rounded-2xl bg-bolt grid place-items-center shadow-lg shadow-bolt/20"
             >
               <svg className="w-5 h-5 text-white" viewBox="0 0 164 149" fill="currentColor">
                 <path d="M96 74.5C96 82.232 89.732 88.5 82 88.5 74.268 88.5 68 82.232 68 74.5 68 66.768 74.268 60.5 82 60.5 89.732 60.5 96 66.768 96 74.5Z"/>
@@ -351,42 +353,42 @@ export function IntegrationView({ title, subtitle, integrations }: { title: stri
         </div>
 
         {/* Vertical connector line */}
-        <div className="flex justify-center mb-4">
-          <div className="relative w-px h-6 bg-sand-200">
+        <div className="flex justify-center mb-3">
+          <div className="relative w-px h-5 bg-sand-200">
             <motion.div
               className="absolute top-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-bolt"
-              animate={{ y: [0, 24], opacity: [1, 0] }}
+              animate={{ y: [0, 20], opacity: [1, 0] }}
               transition={{ duration: 1.2, repeat: Infinity, ease: "easeIn" }}
             />
           </div>
         </div>
 
-        {/* Integration grid */}
-        <div className="grid grid-cols-3 gap-2.5 px-2">
-          {items.slice(0, 6).map((intg, i) => (
+        {/* Integration grid — 4 columns for all 11 */}
+        <div className="flex flex-wrap justify-center gap-2 px-1">
+          {items.map((intg, i) => (
             <motion.div
               key={intg.name}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 + i * 0.08 }}
-              className="flex flex-col items-center gap-1.5"
+              transition={{ delay: 0.3 + i * 0.05 }}
+              className="flex flex-col items-center gap-1 w-18"
             >
-              <div className="relative w-12 h-12 rounded-xl bg-white border border-sand-200 shadow-sm grid place-items-center">
-                <img src={`/integrations/${intg.icon}.svg`} alt={intg.name} className="w-7 h-7" loading="lazy" />
+              <div className="relative w-10 h-10 rounded-lg bg-white border border-sand-200 shadow-sm grid place-items-center">
+                <img src={`/integrations/${intg.icon}.svg`} alt={intg.name} className="w-6 h-6" loading="lazy" />
                 <motion.div
-                  className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-white"
+                  className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-500 border-[1.5px] border-white"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
-                  transition={{ delay: 0.6 + i * 0.12, type: "spring", stiffness: 300 }}
+                  transition={{ delay: 0.6 + i * 0.08, type: "spring", stiffness: 300 }}
                 />
               </div>
-              <span className="text-[9px] font-medium text-sand-400 text-center leading-tight">{intg.name}</span>
+              <span className="text-[8px] font-medium text-sand-400 text-center leading-tight truncate w-full">{intg.name}</span>
             </motion.div>
           ))}
         </div>
 
         {/* Status */}
-        <motion.div {...item(4)} className="flex items-center justify-center gap-1.5 text-[10px] font-semibold text-emerald-600 mt-4">
+        <motion.div {...item(4)} className="flex items-center justify-center gap-1.5 text-[10px] font-semibold text-emerald-600 mt-3">
           <motion.div animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 2, repeat: Infinity }} className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
           Data wordt automatisch gesynchroniseerd
         </motion.div>
