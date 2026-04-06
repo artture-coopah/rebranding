@@ -33,7 +33,7 @@ function loadTemplate(name: string, data: ContactData): string {
   return html;
 }
 
-const FROM = process.env.RESEND_FROM || "Aifficient <onboarding@resend.dev>";
+const FROM = process.env.RESEND_FROM || "onboarding@resend.dev";
 const NOTIFICATION_TO = process.env.NOTIFICATION_EMAIL || "hello@aifficient.be";
 
 export async function sendContactNotification(data: ContactData) {

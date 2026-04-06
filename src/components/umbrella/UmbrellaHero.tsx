@@ -3,6 +3,7 @@
 import { ArrowRight, Zap, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { Blob } from "../ui/Blob";
+import Image from "next/image";
 import Link from "next/link";
 
 function Check() {
@@ -25,6 +26,16 @@ export function UmbrellaHero() {
 
       <div className="relative z-10 mx-auto max-w-[1440px] px-8 pt-32 pb-20 w-full">
         <div className="max-w-3xl mx-auto text-center">
+          {/* Icon */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mb-6"
+          >
+            <Image src="/logo.png" alt="Aifficient" width={56} height={56} />
+          </motion.div>
+
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
