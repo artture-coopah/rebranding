@@ -41,11 +41,8 @@ export function Step01Sidebar() {
   return (
     <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }} className="bg-white rounded-2xl border border-sand-200 shadow-lg w-[240px] mx-auto overflow-hidden">
       <div className="h-[54px] flex items-center px-3.5 gap-2.5 border-b border-sand-200">
-        <div className="w-7 h-7 rounded-lg bg-bolt grid place-items-center">
-          <svg className="w-4 h-4 text-white" viewBox="0 0 164 149" fill="currentColor">
-            <path d="M96 74.5C96 82.232 89.732 88.5 82 88.5 74.268 88.5 68 82.232 68 74.5 68 66.768 74.268 60.5 82 60.5 89.732 60.5 96 66.768 96 74.5Z"/>
-            <path d="M150 75H82.5L14.5 134.5 82.5 14 150 134.5" stroke="currentColor" strokeWidth="4" fill="none"/>
-          </svg>
+        <div className="w-7 h-7 rounded-lg grid place-items-center">
+          <img src="/logo.svg" alt="aifficient" className="w-4.5 h-4.5 object-contain" />
         </div>
         <span className="text-[15px] font-bold text-sand-900 tracking-tight"><span className="text-bolt">ai</span>fficient</span>
         <span className="text-[11px] font-medium text-sand-400 ml-0.5">Mail</span>
