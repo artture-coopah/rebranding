@@ -18,6 +18,7 @@ function getResend() {
 function loadTemplate(name: string, data: ContactData): string {
   const path = join(process.cwd(), "templates", `${name}.html`);
   let html = readFileSync(path, "utf-8");
+  html = html.replace(/\{\{cdn\}\}/g, process.env.CDN || "");
   html = html.replace(/\{\{naam\}\}/g, data.naam);
   html = html.replace(/\{\{bedrijf\}\}/g, encodeURIComponent(data.bedrijf));
   html = html.replace(/\{\{email\}\}/g, data.email);
