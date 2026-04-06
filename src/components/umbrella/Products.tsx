@@ -61,7 +61,6 @@ export function Products() {
                   "Gedeelde inbox met Outlook sync",
                   "AI-agents voor triage, auto-reply en data-extractie",
                   "Visuele automation builder",
-                  "Vanaf €19/seat/maand",
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-2 text-sm text-sand-600">
                     <svg className="w-4 h-4 text-bolt shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">

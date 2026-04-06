@@ -109,7 +109,7 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.55 }}
               className="mt-8 flex flex-col gap-2"
             >
-              {["Bespaar 10+ uur per medewerker/maand", "Snel en eenvoudig opgezet", "Vanaf €19/seat/maand"].map((t) => (
+              {["Bespaar 10+ uur per medewerker/maand", "Snel en eenvoudig opgezet"].map((t) => (
                 <span key={t} className="flex items-center gap-2 text-sm text-sand-500">
                   <Check />
                   {t}
