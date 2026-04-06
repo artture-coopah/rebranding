@@ -5,10 +5,9 @@ import { motion } from "framer-motion";
 import { fadeIn, stagger } from "../ui/animations";
 
 export function Pricing() {
-  const tiers = [
+  const plans = [
     {
       name: "Starter",
-      price: "19",
       description: "Voor zelfstandigen en kleine teams die hun inbox onder controle willen.",
       features: [
         "Gedeelde inbox (1 mailbox)",
@@ -23,7 +22,6 @@ export function Pricing() {
     },
     {
       name: "Professional",
-      price: "49",
       description: "Voor KMO's die e-mailverwerking volledig willen automatiseren.",
       features: [
         "Alles van Starter",
@@ -39,7 +37,6 @@ export function Pricing() {
     },
     {
       name: "Enterprise",
-      price: "89",
       description: "Voor bedrijven met complexe workflows en custom integraties.",
       features: [
         "Alles van Professional",
@@ -66,7 +63,7 @@ export function Pricing() {
           className="text-center mb-16"
         >
           <motion.div variants={fadeIn} className="flex justify-center mb-4">
-            <span className="section-label">Prijzen</span>
+            <span className="section-label">Plannen</span>
           </motion.div>
           <motion.h2
             variants={fadeIn}
@@ -79,7 +76,7 @@ export function Pricing() {
             variants={fadeIn}
             className="mt-4 text-sand-500 max-w-2xl mx-auto text-lg"
           >
-            Per seat, per maand. Geen verborgen kosten. Start met een gratis proefperiode en schaal op wanneer je wil.
+            Kies het plan dat bij jouw team past. Geen verborgen kosten. Start met een gratis proefperiode en schaal op wanneer je wil.
           </motion.p>
         </motion.div>
 
@@ -90,37 +87,31 @@ export function Pricing() {
           viewport={{ once: true, margin: "-100px" }}
           className="grid lg:grid-cols-3 gap-6 items-stretch"
         >
-          {tiers.map((tier) => (
+          {plans.map((plan) => (
             <motion.div
-              key={tier.name}
+              key={plan.name}
               variants={fadeIn}
               className={`card p-8 flex flex-col relative ${
-                tier.highlighted
+                plan.highlighted
                   ? "border-bolt/30 ring-2 ring-bolt/10 shadow-lg shadow-bolt/5"
                   : ""
               }`}
             >
-              {tier.highlighted && (
+              {plan.highlighted && (
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-bolt px-4 py-1 text-xs font-semibold text-white">
                   Populairst
                 </div>
               )}
               <div className="mb-6">
                 <h3 className="font-display text-xl font-semibold text-sand-900 mb-2">
-                  {tier.name}
+                  {plan.name}
                 </h3>
-                <div className="flex items-baseline gap-1">
-                  <span className="font-display text-4xl font-bold text-sand-900">
-                    &euro;{tier.price}
-                  </span>
-                  <span className="text-sand-500 text-sm">/seat/maand</span>
-                </div>
-                <p className="mt-3 text-sand-500 text-sm leading-relaxed">
-                  {tier.description}
+                <p className="text-sand-500 text-sm leading-relaxed">
+                  {plan.description}
                 </p>
               </div>
               <ul className="flex flex-col gap-3 mb-8 flex-1">
-                {tier.features.map((f) => (
+                {plan.features.map((f) => (
                   <li key={f} className="flex items-start gap-2 text-sm text-sand-600">
                     <Check size={16} className="text-bolt shrink-0 mt-0.5" />
                     {f}
@@ -130,19 +121,18 @@ export function Pricing() {
               <a
                 href="#contact"
                 className={`group flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold transition-all ${
-                  tier.highlighted
+                  plan.highlighted
                     ? "bg-bolt text-white hover:bg-bolt-dark hover:shadow-lg hover:shadow-bolt/15"
                     : "border-2 border-bolt text-bolt hover:bg-bolt hover:text-white"
                 }`}
               >
-                {tier.cta}
+                {plan.cta}
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </a>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* VLAIO callout */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
